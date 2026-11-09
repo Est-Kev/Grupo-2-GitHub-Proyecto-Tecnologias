@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ilo &amp; oli</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido principal</a>
+
+<!-- Un radio por pantalla: el que está marcado decide qué pantalla se ve -->
+<input type="radio" name="pantalla" id="v-inicio" class="pantalla" tabindex="-1" aria-hidden="true" checked>
+<input type="radio" name="pantalla" id="v-acceso" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-registro" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-mascotas" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-mascota" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-adopcion" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-conf-adopcion" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-tienda" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-producto" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-carrito" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-pago" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-conf-pedido" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-veterinarias" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-vet" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-cita" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-conf-cita" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-cuenta" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-membresia" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-donaciones" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-conf-donacion" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-mascota-rocco" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-mascota-toby" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-mascota-mishi" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-mascota-simon" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-mascota-nube" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-mascota-max" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-mascota-bella" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-adopcion-rocco" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-adopcion-toby" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-adopcion-mishi" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-adopcion-simon" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-adopcion-nube" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-adopcion-max" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-adopcion-bella" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-producto-humedo" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-producto-snacks" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-producto-shampoo" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-producto-toallitas" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-producto-arena" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-producto-correa" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-producto-rascador" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-producto-cama" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-vet-patitas" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-vet-norte" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-vet-refugio" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-cita-patitas" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-cita-norte" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-form-cita-refugio" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-conf-perfil" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-conf-membresia" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-conf-sello" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-resumen" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-solicitudes" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-conf-aprobada" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-conf-rechazada" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-inventarios" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-mascota-nueva" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-producto-nuevo" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-conf-inventario" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-ingresos" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-sellos" class="pantalla" tabindex="-1" aria-hidden="true">
+<input type="radio" name="pantalla" id="v-adm-config" class="pantalla" tabindex="-1" aria-hidden="true">
+
+<!-- Íconos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="paw" viewBox="0 0 24 24"><circle cx="7" cy="8" r="2.1"/><circle cx="12.3" cy="5.6" r="2.1"/><circle cx="17.6" cy="8" r="2.1"/><path d="M12.3 12.2c3.2 0 6 2.5 6 5.2 0 1.7-1.5 2.7-3.3 2.1-1.8-.6-3.5-.6-5.3 0-1.8.6-3.3-.4-3.3-2.1 0-2.7 2.7-5.2 5.9-5.2z"/></symbol>
+  <symbol id="bolsa" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 016 0v2"/></symbol>
+  <symbol id="cruz" viewBox="0 0 24 24"><path d="M12 3c2 1.5 4 2 7 2v6c0 5-3 8-7 10-4-2-7-5-7-10V5c3 0 5-.5 7-2z"/><path d="M12 9v6M9 12h6"/></symbol>
+  <symbol id="persona" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.8-4 3.8-6 7.5-6s6.7 2 7.5 6"/></symbol>
+  <symbol id="corazon" viewBox="0 0 24 24"><path d="M12 20s-7-4.2-9.3-8.3C1 8.3 2.6 5 6 5c2 0 3.5 1.1 6 3.6C14.5 6.1 16 5 18 5c3.4 0 5 3.3 3.3 6.7C19 15.8 12 20 12 20z"/></symbol>
+  <symbol id="estrella" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.3"/><path d="M8 12.3l2.6 2.6L16 9.5"/></symbol>
+  <symbol id="ico-carrito" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 002 1.6h7.4a2 2 0 002-1.6L20.5 8H6"/><circle cx="9.5" cy="20" r="1.2"/><circle cx="17" cy="20" r="1.2"/></symbol>
+  <symbol id="lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.3"/><path d="M21 21l-4.6-4.6"/></symbol>
+  <symbol id="flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="atras" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.3"/><path d="M12 7v5.3l3.6 2.1"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.6A7 7 0 005 9.4C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.4" r="2.4"/></symbol>
+  <symbol id="telefono" viewBox="0 0 24 24"><path d="M5.5 4h3l1.5 4.5-2 1.7a12 12 0 006.8 6.8l1.7-2 4.5 1.5v3c0 1-1 1.8-2 1.6-11-1.3-14.3-9.5-15.5-15.6C3.3 4.8 4.4 4 5.5 4z"/></symbol>
+  <symbol id="calendario" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></symbol>
+  <symbol id="tarjeta" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2.2"/><path d="M2.5 9.5h19"/></symbol>
+  <symbol id="teclado" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><path d="M6.5 10h.01M10 10h.01M13.5 10h.01M17 10h.01M8 14h8"/></symbol>
+  <symbol id="contraste" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.3"/><path d="M12 2.7a9.3 9.3 0 000 18.6z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="altavoz" viewBox="0 0 24 24"><path d="M4 15V9a2 2 0 012-2h2l5-4v18l-5-4H6a2 2 0 01-2-2z"/><path d="M17 8a5 5 0 010 8"/></symbol>
+  <symbol id="documento" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></symbol>
+  <symbol id="pantalla" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+</svg>
+
+<nav class="nav-usuario" aria-label="Principal">
+  <label class="logo" for="v-inicio" role="link" tabindex="0" aria-label="ilo y oli, ir al inicio"><span>ilo</span><span>&amp; oli</span></label>
+  <div class="links">
+    <label for="v-mascotas" role="link" tabindex="0">Adopta</label>
+    <label for="v-veterinarias" role="link" tabindex="0">Servicios</label>
+    <label for="v-tienda" role="link" tabindex="0">Tienda</label>
+    <label for="v-donaciones" role="link" tabindex="0">Donaciones</label>
+  </div>
+  <label class="btn-cuenta" for="v-carrito" role="link" tabindex="0" aria-label="Carrito, 3 productos"><svg class="icon" aria-hidden="true" focusable="false"><use href="#ico-carrito"/></svg>Carrito <span class="contador" aria-hidden="true">3</span></label>
+  <label class="btn-cuenta" for="v-cuenta" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#persona"/></svg>Mi cuenta</label>
+</nav>
+
+<nav class="nav-admin" aria-label="Administración">
+  <label class="logo" for="v-adm-resumen" role="link" tabindex="0" aria-label="ilo y oli, ir al panel de administración"><span>ilo</span><span>&amp; oli</span></label>
+  <div class="links">
+    <label for="v-adm-resumen" role="link" tabindex="0">Estadísticas</label>
+    <label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label>
+    <label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label>
+    <label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label>
+  </div>
+  <label class="btn-cuenta" for="v-adm-config" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#persona"/></svg>Mi cuenta</label>
+</nav>
+
+<main id="contenido" tabindex="-1">
+
+  <!-- ===== INICIO ===== -->
+  <section class="vista" id="inicio" aria-label="Inicio">
+    <div class="hero">
+      <div>
+        <span class="etiqueta"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Adopción · tienda · veterinarias</span>
+        <h1>Bienestar que<br>se siente</h1>
+        <p class="intro">Todo lo que tu mascota necesita, en un solo lugar: adopción responsable, productos de cuidado y atención veterinaria.</p>
+        <div class="botones">
+          <label class="btn" for="v-mascotas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Ver mascotas</label>
+          <label class="btn borde" for="v-veterinarias" role="link" tabindex="0">Buscar veterinaria</label>
+        </div>
+      </div>
+      <svg class="ilustracion" viewBox="0 0 420 420" role="img" aria-label="Un perro y un gato juntos">
+        <defs><linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#aec7a4"/><stop offset="1" stop-color="#2f5233"/></linearGradient></defs>
+        <circle cx="210" cy="210" r="196" fill="url(#fondo)"/>
+        <circle cx="338" cy="92" r="34" fill="#e3a44b"/>
+        <circle cx="70" cy="330" r="22" fill="#faf8f2" opacity=".85"/>
+        <path d="M118 300c-4-58 14-98 54-98s58 40 54 98c0 26-22 40-54 40s-58-14-54-40z" fill="#24402a"/>
+        <path d="M126 210l-14-34 30 20z" fill="#24402a"/>
+        <path d="M226 210l14-34-30 20z" fill="#24402a"/>
+        <path d="M232 296c20 6 34 2 40-14" stroke="#24402a" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <circle cx="152" cy="224" r="5.5" fill="#faf8f2"/>
+        <circle cx="200" cy="224" r="5.5" fill="#faf8f2"/>
+        <path d="M166 242q10 8 20 0" stroke="#faf8f2" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M172 340c-10-78 16-132 76-132s86 54 76 132c0 34-34 50-76 50s-76-16-76-50z" fill="#e3a44b"/>
+        <path d="M184 224q-30-14-26-54 36 4 42 40z" fill="#b97f2e"/>
+        <path d="M312 224q30-14 26-54-36 4-42 40z" fill="#b97f2e"/>
+        <circle cx="224" cy="252" r="7" fill="#2f2010"/>
+        <circle cx="288" cy="252" r="7" fill="#2f2010"/>
+        <ellipse cx="256" cy="282" rx="14" ry="10" fill="#2f2010"/>
+        <path d="M242 296q14 12 28 0" stroke="#2f2010" stroke-width="4" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="accesos">
+      <label class="acceso" for="v-mascotas" role="link" tabindex="0"><div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><h3>Adopta</h3><p>Encuentra tu mejor amigo</p></label>
+      <label class="acceso" for="v-veterinarias" role="link" tabindex="0"><div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#cruz"/></svg></div><h3>Servicios</h3><p>Cuidado y salud para tu mascota</p></label>
+      <label class="acceso" for="v-tienda" role="link" tabindex="0"><div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><h3>Tienda</h3><p>Productos de calidad para su bienestar</p></label>
+      <label class="acceso" for="v-cuenta" role="link" tabindex="0"><div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#persona"/></svg></div><h3>Mi cuenta</h3><p>Sigue tus solicitudes y pedidos</p></label>
+    </div>
+
+    <section class="bloque">
+      <div class="bloque-titulo">
+        <div><h2>Mascotas en adopción</h2><p>Algunas de las que te están esperando esta semana.</p></div>
+        <label class="ver-mas" for="v-mascotas" role="link" tabindex="0">Ver todas <svg class="icon" aria-hidden="true" focusable="false"><use href="#flecha"/></svg></label>
+      </div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Luna</h4><div class="meta">Perro · 2 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-rocco" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Rocco</h4><div class="meta">Perro · 5 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-toby" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Toby</h4><div class="meta">Perro · 8 meses</div></div></label>
+      </div>
+    </section>
+
+    <section class="bloque">
+      <div class="bloque-titulo"><div><h2>Así funciona</h2><p>De explorar a confirmar, en cuatro pasos.</p></div></div>
+      <div class="pasos">
+        <div class="paso"><div class="num">1</div><h3>Explora</h3><p>Recorre mascotas, productos o veterinarias y usa los filtros para encontrar justo lo que necesitas.</p></div>
+        <div class="paso"><div class="num">2</div><h3>Elige</h3><p>Revisa la información detallada antes de decidir: salud, fundación, precio o servicios disponibles.</p></div>
+        <div class="paso"><div class="num">3</div><h3>Solicita</h3><p>Envía tu solicitud de adopción, agrega productos al carrito o reserva una cita.</p></div>
+        <div class="paso"><div class="num">4</div><h3>Haz seguimiento</h3><p>Consulta el estado de todo lo que solicitaste desde Mi cuenta.</p></div>
+      </div>
+    </section>
+
+    <div class="cifras">
+      <div><strong>8</strong><span>mascotas en adopción</span></div>
+      <div><strong>4</strong><span>veterinarias aliadas</span></div>
+      <div><strong>9</strong><span>productos disponibles</span></div>
+    </div>
+
+    <div class="accesibilidad">
+      <div>
+        <h2>Pensado para que todos puedan usarlo</h2>
+        <p>La accesibilidad no es un extra: está incorporada al diseño desde el primer boceto, para personas con distintas capacidades y necesidades.</p>
+      </div>
+      <ul>
+        <li><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#teclado"/></svg></span><div><b>Navegación por teclado</b>Todo el sitio es operable sin mouse.</div></li>
+        <li><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#contraste"/></svg></span><div><b>Contraste adecuado</b>Colores legibles en toda la interfaz.</div></li>
+        <li><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#altavoz"/></svg></span><div><b>Compatible con lectores de pantalla</b>Estructura semántica y textos alternativos.</div></li>
+        <li><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#pantalla"/></svg></span><div><b>Responsive</b>Misma experiencia en cualquier dispositivo.</div></li>
+      </ul>
+    </div>
+
+    <section class="bloque">
+      <div class="bloque-titulo">
+        <div><h2>Lo nuevo en la tienda</h2><p>Alimento, higiene y accesorios para el día a día.</p></div>
+        <label class="ver-mas" for="v-tienda" role="link" tabindex="0">Ver tienda <svg class="icon" aria-hidden="true" focusable="false"><use href="#flecha"/></svg></label>
+      </div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Concentrado Premium 3kg</h4><div class="meta">Alimento · $68.000</div></div></label>
+        <label class="tarjeta" for="v-producto-humedo" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Alimento húmedo para gatos</h4><div class="meta">Alimento · $12.000</div></div></label>
+        <label class="tarjeta" for="v-producto-snacks" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Snacks dentales</h4><div class="meta">Alimento · $19.000</div></div></label>
+      </div>
+    </section>
+
+    <section class="bloque">
+      <div class="bloque-titulo"><div><h2>Más que adopción</h2><p>Apoya la causa y obtén beneficios por cuidar a tu mascota.</p></div></div>
+      <div class="dos-col">
+        <label class="acceso" for="v-donaciones" role="link" tabindex="0"><div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg></div><h3>Súmate a la causa</h3><p>Apoya económicamente el rescate, cuidado y adopción de las fundaciones aliadas.</p></label>
+        <label class="acceso" for="v-membresia" role="link" tabindex="0"><div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#estrella"/></svg></div><h3>Membresía y sellos</h3><p>Descuentos, prioridad en adopciones y sellos digitales por vacunación al día.</p></label>
+      </div>
+    </section>
+
+    <div class="banner">
+      <h2>¿Listo para encontrar a tu compañero?</h2>
+      <p>Miles de personas ya han adoptado, comprado o agendado una cita desde ilo &amp; oli. Tú también puedes empezar hoy.</p>
+      <div class="botones">
+        <label class="btn miel" for="v-mascotas" role="link" tabindex="0">Ver mascotas</label>
+        <label class="btn borde" for="v-acceso" role="link" tabindex="0">Crear cuenta</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACCESO ===== -->
+  <section class="vista" id="acceso" aria-label="Iniciar sesión">
+    <h2>Accede a tu cuenta</h2>
+    <p class="aviso-pago" role="status" hidden>Inicia sesión o crea tu cuenta para continuar con el pago. Tu carrito se conserva.</p>
+    <div class="pestanas" role="tablist" aria-label="Acceso a la cuenta"><label class="activo" for="v-acceso" role="tab" id="tab-a-iniciar" aria-selected="true" tabindex="0">Iniciar sesión</label><label for="v-registro" role="tab" id="tab-a-registro" aria-selected="false" tabindex="-1">Registrarme</label></div>
+    <div class="panel" role="tabpanel" aria-labelledby="tab-a-iniciar">
+      <div class="campo"><label for="li-correo">Correo electrónico</label><input id="li-correo" autocomplete="email" type="email" placeholder="tú@correo.com"></div>
+      <div class="campo"><label for="li-clave">Contraseña</label><input id="li-clave" autocomplete="current-password" type="password" placeholder="••••••••"></div>
+      <div class="campo"><label class="check discreto"><input type="checkbox" id="li-admin"> Soy administrador de ilo &amp; oli</label></div>
+      <label class="btn ancho" for="v-cuenta" role="button" tabindex="0" data-accion="login">Iniciar sesión</label>
+    </div>
+  </section>
+
+  <section class="vista" id="registro" aria-label="Registro">
+    <h2>Accede a tu cuenta</h2>
+    <p class="aviso-pago" role="status" hidden>Inicia sesión o crea tu cuenta para continuar con el pago. Tu carrito se conserva.</p>
+    <div class="pestanas" role="tablist" aria-label="Acceso a la cuenta"><label for="v-acceso" role="tab" id="tab-r-iniciar" aria-selected="false" tabindex="-1">Iniciar sesión</label><label class="activo" for="v-registro" role="tab" id="tab-r-registro" aria-selected="true" tabindex="0">Registrarme</label></div>
+    <div class="panel" role="tabpanel" aria-labelledby="tab-r-registro">
+      <div class="campo"><label for="re-nombre">Nombre</label><input id="re-nombre" autocomplete="name" type="text"></div>
+      <div class="campo"><label for="re-correo">Correo electrónico</label><input id="re-correo" autocomplete="email" type="email"></div>
+      <div class="campo"><label for="re-clave">Contraseña</label><input id="re-clave" autocomplete="new-password" type="password"></div>
+      <label class="btn ancho" for="v-cuenta" role="button" tabindex="0" data-accion="registro">Crear cuenta</label>
+    </div>
+  </section>
+
+  <!-- ===== ADOPCIÓN ===== -->
+  <section class="vista" id="mascotas" aria-label="Mascotas en adopción">
+    <div class="bloque">
+      <div class="bloque-titulo"><div><h2>Mascotas disponibles</h2><p>Cada ficha trae lo necesario para una adopción informada.</p></div></div>
+      <label class="buscador"><svg class="icon" aria-hidden="true" focusable="false"><use href="#lupa"/></svg><input type="text" placeholder="Buscar por nombre o especie..." aria-label="Buscar mascotas por nombre o especie"></label>
+      <div class="filtros" role="group" aria-label="Filtrar mascotas por tipo">
+        <button type="button" class="chip activo" aria-pressed="true">Todas</button><button type="button" class="chip" aria-pressed="false">Perros</button><button type="button" class="chip" aria-pressed="false">Gatos</button><button type="button" class="chip" aria-pressed="false">Asistencia</button>
+      </div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Luna</h4><div class="meta">Perro · 2 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-rocco" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Rocco</h4><div class="meta">Perro · 5 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-toby" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Toby</h4><div class="meta">Perro · 8 meses</div></div></label>
+        <label class="tarjeta" for="v-mascota-mishi" role="link" tabindex="0"><div class="imagen"><span class="tag">Gato</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Mishi</h4><div class="meta">Gato · 1 año</div></div></label>
+        <label class="tarjeta" for="v-mascota-simon" role="link" tabindex="0"><div class="imagen"><span class="tag">Gato</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Simón</h4><div class="meta">Gato · 3 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-nube" role="link" tabindex="0"><div class="imagen"><span class="tag">Gato</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Nube</h4><div class="meta">Gato · 6 meses</div></div></label>
+        <label class="tarjeta" for="v-mascota-max" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro de asistencia</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Max</h4><div class="meta">Perro de asistencia · 4 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-bella" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro de asistencia</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Bella</h4><div class="meta">Perro de asistencia · 3 años</div></div></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="vista" id="mascota" aria-label="Detalle de mascota">
+    <label class="volver" for="v-mascotas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div>
+      <div>
+        <h2>Luna</h2>
+        <div>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Perro</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg> 2 años</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Disponible</span>
+        </div>
+        <dl>
+          <dt>Santuario / fundación</dt><dd>Fundación Huellas</dd>
+          <dt>Estado de salud</dt><dd>Vacunada y esterilizada</dd>
+          <dt>Tamaño</dt><dd>Mediano</dd>
+          <dt>Temperamento</dt><dd>Activa, cariñosa, buena con niños y otros perros.</dd>
+        </dl>
+        <p>Mascota sociable, se lleva bien con niños y otras mascotas. Ideal para hogares con espacio para jugar.</p>
+        <label class="btn miel" for="v-form-adopcion" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg> Solicitar adopción</label>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>Otras mascotas que también buscan hogar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota-rocco" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Rocco</h4><div class="meta">Perro · 5 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-toby" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Toby</h4><div class="meta">Perro · 8 meses</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="form-adopcion" aria-label="Solicitud de adopción">
+    <label class="volver" for="v-mascota" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al detalle</label>
+    <h2>Formulario de solicitud de adopción</h2>
+    <p>Completa tus datos para iniciar el contacto con la fundación correspondiente.</p>
+    <p style="font-weight:600; color:var(--verde)">Adopción de: Luna</p>
+    <div class="panel">
+      <div class="campo"><label for="ad-nombre">Nombre completo</label><input id="ad-nombre" autocomplete="name" type="text"></div>
+      <div class="campo"><label for="ad-vivienda">Tipo de vivienda</label><select id="ad-vivienda"><option>Casa con patio</option><option>Apartamento</option></select></div>
+      <div class="campo"><label for="ad-obs">Observaciones</label><textarea id="ad-obs" rows="3" placeholder="Cuéntale a la fundación por qué quieres adoptar"></textarea></div>
+      <label class="btn ancho" for="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</label>
+    </div>
+  </section>
+
+  <section class="vista" id="conf-adopcion" aria-label="Solicitud de adopción registrada">
+    <div class="confirmacion">
+      <div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div>
+      <h2>Solicitud registrada</h2>
+      <p>Tu solicitud de adopción quedó en estado <b>pendiente</b>. La fundación se pondrá en contacto contigo pronto.</p>
+      <label class="btn borde" for="v-cuenta" role="link" tabindex="0">Ver estado en Mi cuenta</label>
+    </div>
+  </section>
+
+  <!-- ===== TIENDA ===== -->
+  <section class="vista" id="tienda" aria-label="Tienda">
+    <div class="bloque">
+      <div class="bloque-titulo"><div><h2>Catálogo de productos</h2><p>Alimentación, higiene y entretenimiento para tu mascota.</p></div></div>
+      <label class="buscador"><svg class="icon" aria-hidden="true" focusable="false"><use href="#lupa"/></svg><input type="text" placeholder="Buscar producto..." aria-label="Buscar productos"></label>
+      <div class="filtros" role="group" aria-label="Filtrar productos por categoría">
+        <button type="button" class="chip activo" aria-pressed="true">Todas</button><button type="button" class="chip" aria-pressed="false">Alimento</button><button type="button" class="chip" aria-pressed="false">Higiene</button><button type="button" class="chip" aria-pressed="false">Accesorios</button>
+      </div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Concentrado Premium 3kg</h4><div class="meta">Alimento · $68.000</div></div></label>
+        <label class="tarjeta" for="v-producto-humedo" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Alimento húmedo para gatos</h4><div class="meta">Alimento · $12.000</div></div></label>
+        <label class="tarjeta" for="v-producto-snacks" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Snacks dentales</h4><div class="meta">Alimento · $19.000</div></div></label>
+        <label class="tarjeta" for="v-producto-shampoo" role="link" tabindex="0"><div class="imagen"><span class="tag">Higiene</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Shampoo hipoalergénico</h4><div class="meta">Higiene · $27.000</div></div></label>
+        <label class="tarjeta" for="v-producto-toallitas" role="link" tabindex="0"><div class="imagen"><span class="tag">Higiene</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Toallitas húmedas</h4><div class="meta">Higiene · $15.000</div></div></label>
+        <label class="tarjeta" for="v-producto-arena" role="link" tabindex="0"><div class="imagen"><span class="tag">Higiene</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Arena sanitaria aglomerante</h4><div class="meta">Higiene · $32.000</div></div></label>
+        <label class="tarjeta" for="v-producto-correa" role="link" tabindex="0"><div class="imagen"><span class="tag">Accesorios</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Correa reflectiva</h4><div class="meta">Accesorios · $35.000</div></div></label>
+        <label class="tarjeta" for="v-producto-rascador" role="link" tabindex="0"><div class="imagen"><span class="tag">Accesorios</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Rascador para gatos</h4><div class="meta">Accesorios · $89.000</div></div></label>
+        <label class="tarjeta" for="v-producto-cama" role="link" tabindex="0"><div class="imagen"><span class="tag">Accesorios</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Cama acolchada mediana</h4><div class="meta">Accesorios · $75.000</div></div></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="vista" id="producto" aria-label="Detalle de producto">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div>
+      <div>
+        <span class="badge">Alimento</span>
+        <h2>Concentrado Premium 3kg</h2>
+        <p class="precio">$68.000</p>
+        <p>Alimento balanceado para perros adultos con proteína de pollo real, fortalecido con omega 3 y 6 para un pelaje saludable. Sin colorantes ni conservantes artificiales.</p>
+        <dl>
+          <dt>Marca</dt><dd>NutriCan</dd>
+          <dt>Presentación</dt><dd>Bolsa 3 kg</dd>
+          <dt>Stock disponible</dt><dd>12 unidades</dd>
+        </dl>
+        <div class="botones">
+          <label class="btn miel" for="v-carrito" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Agregar al carrito</label>
+          <label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label>
+        </div>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>También te puede interesar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto-humedo" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Alimento húmedo para gatos</h4><div class="meta">Alimento · $12.000</div></div></label>
+        <label class="tarjeta" for="v-producto-snacks" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Snacks dentales</h4><div class="meta">Alimento · $19.000</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="carrito" aria-label="Carrito de compras">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Seguir comprando</label>
+    <h2>Carrito de compras</h2>
+    <div class="panel">
+      <div class="fila-carrito">
+        <span class="nombre">Concentrado Premium 3kg</span>
+        <div class="cantidad" role="group" aria-label="Cantidad de Concentrado Premium 3kg"><button type="button" aria-label="Disminuir cantidad">–</button><span>1</span><button type="button" aria-label="Aumentar cantidad">+</button></div>
+        <span>$68.000</span><button type="button" class="quitar" aria-label="Quitar Concentrado Premium 3kg del carrito"><span aria-hidden="true">✕</span></button>
+      </div>
+      <div class="fila-carrito">
+        <span class="nombre">Shampoo hipoalergénico</span>
+        <div class="cantidad" role="group" aria-label="Cantidad de Shampoo hipoalergénico"><button type="button" aria-label="Disminuir cantidad">–</button><span>2</span><button type="button" aria-label="Aumentar cantidad">+</button></div>
+        <span>$54.000</span><button type="button" class="quitar" aria-label="Quitar Shampoo hipoalergénico del carrito"><span aria-hidden="true">✕</span></button>
+      </div>
+      <div class="total"><span>Total</span><span>$122.000</span></div>
+      <label class="btn miel ancho" for="v-pago" role="link" tabindex="0">Ir a pagar</label>
+    </div>
+  </section>
+
+  <section class="vista" id="pago" aria-label="Datos de pago">
+    <label class="volver" for="v-carrito" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al carrito</label>
+    <h2>Datos de pago</h2>
+    <div class="panel">
+      <div class="campo"><label for="pg-metodo">Método de pago</label>
+        <select id="pg-metodo"><option>Tarjeta de crédito/débito</option><option>PSE</option><option>Pago contraentrega</option></select>
+      </div>
+      <div class="campo"><label for="pg-numero">Número de tarjeta</label><input id="pg-numero" autocomplete="cc-number" inputmode="numeric" type="text" placeholder="4111 1111 1111 1111"></div>
+      <div class="campo"><label for="pg-nombre">Nombre en la tarjeta</label><input id="pg-nombre" autocomplete="cc-name" type="text" placeholder="Como aparece en la tarjeta"></div>
+      <div style="display:flex; gap:12px">
+        <div class="campo" style="flex:1"><label for="pg-venc">Vencimiento</label><input id="pg-venc" autocomplete="cc-exp" inputmode="numeric" type="text" placeholder="MM/AA"></div>
+        <div class="campo" style="flex:1"><label for="pg-cvv">CVV</label><input id="pg-cvv" autocomplete="cc-csc" inputmode="numeric" type="text" placeholder="123"></div>
+      </div>
+      <div class="total-pago"><div class="total"><span>Total a pagar</span><span>$122.000</span></div></div>
+      <label class="btn miel ancho" for="v-conf-pedido" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#tarjeta"/></svg> Confirmar pago</label>
+    </div>
+  </section>
+
+  <section class="vista" id="conf-pedido" aria-label="Pedido confirmado">
+    <div class="confirmacion">
+      <div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div>
+      <h2>Pedido confirmado</h2>
+      <p>Tu pago fue aprobado y el pedido #P-0142 quedó registrado por un total de $122.000.</p>
+      <label class="btn borde" for="v-cuenta" role="link" tabindex="0">Ver estado en Mi cuenta</label>
+    </div>
+  </section>
+
+  <!-- ===== VETERINARIAS ===== -->
+  <section class="vista" id="veterinarias" aria-label="Directorio veterinario">
+    <div class="bloque">
+      <div class="bloque-titulo"><div><h2>Directorio veterinario</h2><p>Ubicación, contacto, horario y servicios disponibles.</p></div></div>
+      <label class="buscador"><svg class="icon" aria-hidden="true" focusable="false"><use href="#lupa"/></svg><input type="text" placeholder="Buscar por nombre o ubicación..." aria-label="Buscar veterinarias por nombre o ubicación"></label>
+      <div class="filtros" role="group" aria-label="Filtrar veterinarias por servicio">
+        <button type="button" class="chip activo" aria-pressed="true">Todas</button><button type="button" class="chip" aria-pressed="false">Urgencias</button><button type="button" class="chip" aria-pressed="false">Vacunación</button><button type="button" class="chip" aria-pressed="false">Peluquería</button>
+      </div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-vet" role="link" tabindex="0"><div class="imagen"><span class="tag">Atiende urgencias</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#cruz"/></svg></div><div class="texto"><h4>Clínica San Roque</h4><div class="meta">Cra 15 #45-20, Bogotá</div><div class="meta">Lun–Sáb, 8:00–18:00</div></div></label>
+        <label class="tarjeta" for="v-vet-patitas" role="link" tabindex="0"><div class="imagen"><span class="tag">Atiende urgencias</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#cruz"/></svg></div><div class="texto"><h4>Veterinaria Patitas Felices</h4><div class="meta">Cll 80 #22-10, Bogotá</div><div class="meta">Lun–Dom, 9:00–19:00</div></div></label>
+        <label class="tarjeta" for="v-vet-norte" role="link" tabindex="0"><div class="imagen"><svg class="icon" aria-hidden="true" focusable="false"><use href="#cruz"/></svg></div><div class="texto"><h4>Centro Veterinario Norte</h4><div class="meta">Av. Suba #110-5, Bogotá</div><div class="meta">Lun–Vie, 8:00–17:00</div></div></label>
+        <label class="tarjeta" for="v-vet-refugio" role="link" tabindex="0"><div class="imagen"><span class="tag">Atiende urgencias</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#cruz"/></svg></div><div class="texto"><h4>Veterinaria El Refugio</h4><div class="meta">Cra 7 #63-40, Bogotá</div><div class="meta">Lun–Sáb, 7:30–19:00</div></div></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="vista" id="vet" aria-label="Detalle de veterinaria">
+    <label class="volver" for="v-veterinarias" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al directorio</label>
+    <h2>Clínica San Roque</h2>
+    <div class="datos">
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#pin"/></svg></span>Cra 15 #45-20, Bogotá</div>
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#telefono"/></svg></span>(601) 555-0199</div>
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg></span>Lun–Sáb, 8:00–18:00</div>
+    </div>
+    <div class="subtitulo">Servicios</div>
+    <div>
+      <span class="badge">Consulta general</span><span class="badge">Vacunación</span><span class="badge">Desparasitación</span><span class="badge">Peluquería</span><span class="badge">Urgencias</span>
+    </div>
+    <div class="subtitulo">Precios y reserva</div>
+    <div style="margin-bottom:22px">
+      <div class="fila-precio"><span class="nombre">Consulta general</span><span class="valor">$45.000</span><label class="btn chico borde" for="v-form-cita" role="link" tabindex="0" aria-label="Reservar Consulta general">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Vacunación</span><span class="valor">$35.000</span><label class="btn chico borde" for="v-form-cita" role="link" tabindex="0" aria-label="Reservar Vacunación">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Desparasitación</span><span class="valor">$25.000</span><label class="btn chico borde" for="v-form-cita" role="link" tabindex="0" aria-label="Reservar Desparasitación">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Peluquería</span><span class="valor">$40.000</span><label class="btn chico borde" for="v-form-cita" role="link" tabindex="0" aria-label="Reservar Peluquería">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Urgencias</span><span class="valor">$90.000</span><label class="btn chico borde" for="v-form-cita" role="link" tabindex="0" aria-label="Reservar Urgencias">Reservar</label></div>
+    </div>
+    <label class="btn miel" for="v-form-cita" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#calendario"/></svg> Solicitar cita</label>
+  </section>
+
+  <section class="vista" id="form-cita" aria-label="Solicitud de cita">
+    <label class="volver" for="v-vet" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al establecimiento</label>
+    <h2>Solicitud de cita</h2>
+    <p style="font-weight:600; color:var(--verde)">Establecimiento: Clínica San Roque</p>
+    <div class="panel">
+      <div class="campo"><label for="ct-servicio">Servicio</label>
+        <select id="ct-servicio"><option>Consulta general — $45.000</option><option>Vacunación — $35.000</option><option>Desparasitación — $25.000</option><option>Peluquería — $40.000</option><option>Urgencias — $90.000</option></select>
+      </div>
+      <div class="campo"><label for="ct-fecha">Fecha</label><input id="ct-fecha" type="date"></div>
+      <div class="campo"><label for="ct-hora">Hora</label><input id="ct-hora" type="time"></div>
+      <label class="btn ancho" for="v-conf-cita" role="button" tabindex="0">Solicitar cita</label>
+    </div>
+  </section>
+
+  <section class="vista" id="conf-cita" aria-label="Cita solicitada">
+    <div class="confirmacion">
+      <div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div>
+      <h2>Cita solicitada</h2>
+      <p>Tu cita quedó en estado <b>solicitada</b>, sujeta a confirmación del establecimiento.</p>
+      <label class="btn borde" for="v-cuenta" role="link" tabindex="0">Ver estado en Mi cuenta</label>
+    </div>
+  </section>
+
+  <!-- ===== CUENTA ===== -->
+  <section class="vista" id="cuenta" aria-label="Mi cuenta">
+    <h2>Mi cuenta</h2>
+    <p>Perfil, preferencias y seguimiento de tus solicitudes, pedidos y citas.</p>
+    <h3 style="margin-top:24px">Perfil</h3>
+    <div class="panel" style="margin-bottom:28px">
+      <div class="campo"><label for="pf-nombre">Nombre</label><input id="pf-nombre" autocomplete="name" type="text" value="Camila Ríos"></div>
+      <div class="campo"><label for="pf-correo">Correo electrónico</label><input id="pf-correo" autocomplete="email" type="email" value="camila@correo.com" readonly></div>
+      <div class="campo"><label for="pf-pref">Preferencias</label><input id="pf-pref" type="text" value="Perros, tamaño mediano"></div>
+      <div class="campo"><label for="pf-mascota">¿Tienes una mascota? Cuéntanos cuál</label><input id="pf-mascota" type="text" placeholder="Ej: un gato de 2 años"></div>
+      <div class="campo" role="group" aria-labelledby="pf-intereses">
+        <span class="etiqueta-grupo" id="pf-intereses">Intereses dentro de la plataforma</span>
+        <label class="check"><input type="checkbox"> Adopción</label>
+        <label class="check"><input type="checkbox"> Productos</label>
+        <label class="check"><input type="checkbox"> Veterinaria</label>
+      </div>
+      <label class="btn chico borde" for="v-conf-perfil" role="button" tabindex="0">Guardar cambios</label>
+    </div>
+    <div class="atajos">
+      <label class="btn chico borde" for="v-membresia" role="link" tabindex="0">Membresía y sellos de fidelización</label>
+      <label class="btn chico borde" for="v-donaciones" role="link" tabindex="0">Hacer una donación</label>
+      <label class="btn chico borde" for="v-inicio" role="button" tabindex="0" data-accion="logout">Cerrar sesión</label>
+    </div>
+    <h3>Estado de solicitudes</h3>
+    <div class="estado-fila"><span>Solicitud de adopción — Luna</span><span class="estado pendiente">Pendiente</span></div>
+    <div class="estado-fila"><span>Pedido #P-0142</span><span class="estado">Confirmado</span></div>
+    <div class="estado-fila"><span>Cita — Clínica San Roque</span><span class="estado pendiente">Solicitada</span></div>
+  </section>
+
+  <section class="vista" id="membresia" aria-label="Membresía y sellos">
+    <label class="volver" for="v-cuenta" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver a Mi cuenta</label>
+    <h2>Membresía y fidelización</h2>
+    <p>Pensada para usuarios frecuentes que compran productos, agendan servicios veterinarios o siguen procesos de adopción.</p>
+    <div class="dos-col">
+      <div class="panel">
+        <h3>Plan de membresía</h3>
+        <span class="badge gris">Inactiva</span>
+        <ul class="lista" style="margin-top:14px">
+          <li>Descuentos en productos seleccionados</li>
+          <li>Prioridad en la revisión de solicitudes de adopción</li>
+          <li>Acceso a contenido educativo exclusivo sobre cuidado y nutrición</li>
+        </ul>
+        <label class="btn ancho" for="v-conf-membresia" role="button" tabindex="0">Activar membresía</label>
+      </div>
+      <div class="panel">
+        <h3>Sellos digitales</h3>
+        <p>Obtén un sello por mantener al día el carnet de vacunación y desparasitación de tu mascota. Al completar 6 sellos se generan beneficios canjeables.</p>
+        <div class="sellos" role="img" aria-label="3 de 6 sellos acumulados">
+          <span class="sello lleno"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></span>
+          <span class="sello lleno"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></span>
+          <span class="sello lleno"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></span>
+          <span class="sello"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></span>
+          <span class="sello"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></span>
+          <span class="sello"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></span>
+        </div>
+        <p>3 de 6 sellos acumulados.</p>
+        <label class="btn borde ancho" for="v-conf-sello" role="button" tabindex="0">Registrar vacunación/desparasitación al día</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DONACIONES ===== -->
+  <section class="vista" id="donaciones" aria-label="Donaciones">
+    <h2>Donaciones</h2>
+    <p style="max-width:62ch">Apoya económicamente las labores de rescate, cuidado y adopción de las fundaciones aliadas. Lo recaudado se destina a alimentación, atención veterinaria y procesos de adopción.</p>
+    <div class="dos-col">
+      <div class="panel">
+        <h3>Elige un monto</h3>
+        <div class="montos" role="group" aria-label="Montos sugeridos"><button type="button" class="chip" aria-pressed="false">$20.000</button><button type="button" class="chip" aria-pressed="false">$50.000</button><button type="button" class="chip" aria-pressed="false">$100.000</button></div>
+        <div class="campo"><label for="do-monto">Monto (COP)</label><input id="do-monto" inputmode="numeric" min="1" type="number"></div>
+        <div class="campo"><label for="do-fundacion">Fundación</label><select id="do-fundacion"><option>Fundación Huellas</option><option>Santuario Patitas</option></select></div>
+        <label class="btn miel ancho" for="v-conf-donacion" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg> Donar</label>
+      </div>
+      <div class="panel">
+        <h3>¿En qué se usa tu donación?</h3>
+        <ul class="lista">
+          <li>Alimento y atención veterinaria para mascotas en proceso de adopción</li>
+          <li>Procesos de esterilización y vacunación</li>
+          <li>Materiales y transporte para labores de rescate</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="vista" id="conf-donacion" aria-label="Donación registrada">
+    <div class="confirmacion">
+      <div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div>
+      <h2>¡Gracias por tu donación!</h2>
+      <p>Tu donación fue registrada.</p>
+      <label class="btn borde" for="v-inicio" role="link" tabindex="0">Volver al inicio</label>
+    </div>
+  </section>
+
+
+  <!-- ===== MASCOTAS: fichas y solicitudes ===== -->
+  <section class="vista" id="mascota-rocco" aria-label="Detalle de mascota: Rocco">
+    <label class="volver" for="v-mascotas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div>
+      <div>
+        <h2>Rocco</h2>
+        <div>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Perro</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg> 5 años</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Disponible</span>
+        </div>
+        <dl>
+          <dt>Santuario / fundación</dt><dd>Fundación Huellas</dd>
+          <dt>Estado de salud</dt><dd>Vacunado y esterilizado</dd>
+          <dt>Tamaño</dt><dd>Grande</dd>
+          <dt>Temperamento</dt><dd>Tranquilo, leal y protector; prefiere rutinas estables.</dd>
+        </dl>
+        <p>Perro adulto y sereno, ideal para quienes buscan un compañero de paseos largos y tardes en casa. Convive bien con niños mayores.</p>
+        <label class="btn miel" for="v-form-adopcion-rocco" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg> Solicitar adopción</label>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>Otras mascotas que también buscan hogar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Luna</h4><div class="meta">Perro · 2 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-toby" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Toby</h4><div class="meta">Perro · 8 meses</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="form-adopcion-rocco" aria-label="Solicitud de adopción: Rocco">
+    <label class="volver" for="v-mascota-rocco" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al detalle</label>
+    <h2>Formulario de solicitud de adopción</h2>
+    <p>Completa tus datos para iniciar el contacto con la fundación correspondiente.</p>
+    <p style="font-weight:600; color:var(--verde)">Adopción de: Rocco</p>
+    <div class="panel">
+      <div class="campo"><label for="ad-rocco-nombre">Nombre completo</label><input id="ad-rocco-nombre" autocomplete="name" type="text"></div>
+      <div class="campo"><label for="ad-rocco-vivienda">Tipo de vivienda</label><select id="ad-rocco-vivienda"><option>Casa con patio</option><option>Apartamento</option></select></div>
+      <div class="campo"><label for="ad-rocco-obs">Observaciones</label><textarea id="ad-rocco-obs" rows="3" placeholder="Cuéntale a la fundación por qué quieres adoptar"></textarea></div>
+      <label class="btn ancho" for="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</label>
+    </div>
+  </section>
+
+  <section class="vista" id="mascota-toby" aria-label="Detalle de mascota: Toby">
+    <label class="volver" for="v-mascotas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div>
+      <div>
+        <h2>Toby</h2>
+        <div>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Perro</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg> 8 meses</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Disponible</span>
+        </div>
+        <dl>
+          <dt>Santuario / fundación</dt><dd>Santuario Patitas</dd>
+          <dt>Estado de salud</dt><dd>Vacunas al día, esterilización pendiente</dd>
+          <dt>Tamaño</dt><dd>Pequeño</dd>
+          <dt>Temperamento</dt><dd>Juguetón, curioso y lleno de energía.</dd>
+        </dl>
+        <p>Cachorro travieso que necesita un hogar con tiempo para jugar y para empezar su entrenamiento básico. Se adapta rápido a nuevas personas.</p>
+        <label class="btn miel" for="v-form-adopcion-toby" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg> Solicitar adopción</label>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>Otras mascotas que también buscan hogar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Luna</h4><div class="meta">Perro · 2 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-rocco" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Rocco</h4><div class="meta">Perro · 5 años</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="form-adopcion-toby" aria-label="Solicitud de adopción: Toby">
+    <label class="volver" for="v-mascota-toby" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al detalle</label>
+    <h2>Formulario de solicitud de adopción</h2>
+    <p>Completa tus datos para iniciar el contacto con la fundación correspondiente.</p>
+    <p style="font-weight:600; color:var(--verde)">Adopción de: Toby</p>
+    <div class="panel">
+      <div class="campo"><label for="ad-toby-nombre">Nombre completo</label><input id="ad-toby-nombre" autocomplete="name" type="text"></div>
+      <div class="campo"><label for="ad-toby-vivienda">Tipo de vivienda</label><select id="ad-toby-vivienda"><option>Casa con patio</option><option>Apartamento</option></select></div>
+      <div class="campo"><label for="ad-toby-obs">Observaciones</label><textarea id="ad-toby-obs" rows="3" placeholder="Cuéntale a la fundación por qué quieres adoptar"></textarea></div>
+      <label class="btn ancho" for="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</label>
+    </div>
+  </section>
+
+  <section class="vista" id="mascota-mishi" aria-label="Detalle de mascota: Mishi">
+    <label class="volver" for="v-mascotas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div>
+      <div>
+        <h2>Mishi</h2>
+        <div>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Gato</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg> 1 año</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Disponible</span>
+        </div>
+        <dl>
+          <dt>Santuario / fundación</dt><dd>Fundación Huellas</dd>
+          <dt>Estado de salud</dt><dd>Vacunada y esterilizada</dd>
+          <dt>Tamaño</dt><dd>Pequeño</dd>
+          <dt>Temperamento</dt><dd>Dulce, curiosa y muy sociable.</dd>
+        </dl>
+        <p>Gata joven y cariñosa que disfruta de la compañía y de los juegos con plumas. Se adapta bien a apartamentos.</p>
+        <label class="btn miel" for="v-form-adopcion-mishi" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg> Solicitar adopción</label>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>Otras mascotas que también buscan hogar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota-simon" role="link" tabindex="0"><div class="imagen"><span class="tag">Gato</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Simón</h4><div class="meta">Gato · 3 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-nube" role="link" tabindex="0"><div class="imagen"><span class="tag">Gato</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Nube</h4><div class="meta">Gato · 6 meses</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="form-adopcion-mishi" aria-label="Solicitud de adopción: Mishi">
+    <label class="volver" for="v-mascota-mishi" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al detalle</label>
+    <h2>Formulario de solicitud de adopción</h2>
+    <p>Completa tus datos para iniciar el contacto con la fundación correspondiente.</p>
+    <p style="font-weight:600; color:var(--verde)">Adopción de: Mishi</p>
+    <div class="panel">
+      <div class="campo"><label for="ad-mishi-nombre">Nombre completo</label><input id="ad-mishi-nombre" autocomplete="name" type="text"></div>
+      <div class="campo"><label for="ad-mishi-vivienda">Tipo de vivienda</label><select id="ad-mishi-vivienda"><option>Casa con patio</option><option>Apartamento</option></select></div>
+      <div class="campo"><label for="ad-mishi-obs">Observaciones</label><textarea id="ad-mishi-obs" rows="3" placeholder="Cuéntale a la fundación por qué quieres adoptar"></textarea></div>
+      <label class="btn ancho" for="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</label>
+    </div>
+  </section>
+
+  <section class="vista" id="mascota-simon" aria-label="Detalle de mascota: Simón">
+    <label class="volver" for="v-mascotas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div>
+      <div>
+        <h2>Simón</h2>
+        <div>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Gato</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg> 3 años</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Disponible</span>
+        </div>
+        <dl>
+          <dt>Santuario / fundación</dt><dd>Santuario Patitas</dd>
+          <dt>Estado de salud</dt><dd>Vacunado y esterilizado</dd>
+          <dt>Tamaño</dt><dd>Mediano</dd>
+          <dt>Temperamento</dt><dd>Independiente, tranquilo y cariñoso a su manera.</dd>
+        </dl>
+        <p>Gato adulto de carácter calmado, perfecto para hogares tranquilos. Le gusta observar desde las ventanas y buscar un regazo por las tardes.</p>
+        <label class="btn miel" for="v-form-adopcion-simon" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg> Solicitar adopción</label>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>Otras mascotas que también buscan hogar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota-mishi" role="link" tabindex="0"><div class="imagen"><span class="tag">Gato</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Mishi</h4><div class="meta">Gato · 1 año</div></div></label>
+        <label class="tarjeta" for="v-mascota-nube" role="link" tabindex="0"><div class="imagen"><span class="tag">Gato</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Nube</h4><div class="meta">Gato · 6 meses</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="form-adopcion-simon" aria-label="Solicitud de adopción: Simón">
+    <label class="volver" for="v-mascota-simon" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al detalle</label>
+    <h2>Formulario de solicitud de adopción</h2>
+    <p>Completa tus datos para iniciar el contacto con la fundación correspondiente.</p>
+    <p style="font-weight:600; color:var(--verde)">Adopción de: Simón</p>
+    <div class="panel">
+      <div class="campo"><label for="ad-simon-nombre">Nombre completo</label><input id="ad-simon-nombre" autocomplete="name" type="text"></div>
+      <div class="campo"><label for="ad-simon-vivienda">Tipo de vivienda</label><select id="ad-simon-vivienda"><option>Casa con patio</option><option>Apartamento</option></select></div>
+      <div class="campo"><label for="ad-simon-obs">Observaciones</label><textarea id="ad-simon-obs" rows="3" placeholder="Cuéntale a la fundación por qué quieres adoptar"></textarea></div>
+      <label class="btn ancho" for="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</label>
+    </div>
+  </section>
+
+  <section class="vista" id="mascota-nube" aria-label="Detalle de mascota: Nube">
+    <label class="volver" for="v-mascotas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div>
+      <div>
+        <h2>Nube</h2>
+        <div>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Gato</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg> 6 meses</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Disponible</span>
+        </div>
+        <dl>
+          <dt>Santuario / fundación</dt><dd>Fundación Huellas</dd>
+          <dt>Estado de salud</dt><dd>Vacunas al día, esterilización pendiente</dd>
+          <dt>Tamaño</dt><dd>Pequeña</dd>
+          <dt>Temperamento</dt><dd>Juguetona, ágil y muy cariñosa.</dd>
+        </dl>
+        <p>Gatita de pelaje claro y mucha curiosidad. Busca una familia paciente que le dé espacio para explorar y jugar.</p>
+        <label class="btn miel" for="v-form-adopcion-nube" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg> Solicitar adopción</label>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>Otras mascotas que también buscan hogar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota-mishi" role="link" tabindex="0"><div class="imagen"><span class="tag">Gato</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Mishi</h4><div class="meta">Gato · 1 año</div></div></label>
+        <label class="tarjeta" for="v-mascota-simon" role="link" tabindex="0"><div class="imagen"><span class="tag">Gato</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Simón</h4><div class="meta">Gato · 3 años</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="form-adopcion-nube" aria-label="Solicitud de adopción: Nube">
+    <label class="volver" for="v-mascota-nube" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al detalle</label>
+    <h2>Formulario de solicitud de adopción</h2>
+    <p>Completa tus datos para iniciar el contacto con la fundación correspondiente.</p>
+    <p style="font-weight:600; color:var(--verde)">Adopción de: Nube</p>
+    <div class="panel">
+      <div class="campo"><label for="ad-nube-nombre">Nombre completo</label><input id="ad-nube-nombre" autocomplete="name" type="text"></div>
+      <div class="campo"><label for="ad-nube-vivienda">Tipo de vivienda</label><select id="ad-nube-vivienda"><option>Casa con patio</option><option>Apartamento</option></select></div>
+      <div class="campo"><label for="ad-nube-obs">Observaciones</label><textarea id="ad-nube-obs" rows="3" placeholder="Cuéntale a la fundación por qué quieres adoptar"></textarea></div>
+      <label class="btn ancho" for="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</label>
+    </div>
+  </section>
+
+  <section class="vista" id="mascota-max" aria-label="Detalle de mascota: Max">
+    <label class="volver" for="v-mascotas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div>
+      <div>
+        <h2>Max</h2>
+        <div>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Perro de asistencia</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg> 4 años</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Disponible</span>
+        </div>
+        <dl>
+          <dt>Santuario / fundación</dt><dd>Santuario Patitas</dd>
+          <dt>Estado de salud</dt><dd>Vacunado, esterilizado y con entrenamiento certificado</dd>
+          <dt>Tamaño</dt><dd>Grande</dd>
+          <dt>Temperamento</dt><dd>Paciente, obediente y atento.</dd>
+        </dl>
+        <p>Perro de asistencia entrenado para acompañar a personas que necesitan apoyo en su movilidad o en su día a día. Muy tranquilo en espacios públicos.</p>
+        <label class="btn miel" for="v-form-adopcion-max" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg> Solicitar adopción</label>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>Otras mascotas que también buscan hogar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota-bella" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro de asistencia</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Bella</h4><div class="meta">Perro de asistencia · 3 años</div></div></label>
+        <label class="tarjeta" for="v-mascota-rocco" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Rocco</h4><div class="meta">Perro · 5 años</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="form-adopcion-max" aria-label="Solicitud de adopción: Max">
+    <label class="volver" for="v-mascota-max" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al detalle</label>
+    <h2>Formulario de solicitud de adopción</h2>
+    <p>Completa tus datos para iniciar el contacto con la fundación correspondiente.</p>
+    <p style="font-weight:600; color:var(--verde)">Adopción de: Max</p>
+    <div class="panel">
+      <div class="campo"><label for="ad-max-nombre">Nombre completo</label><input id="ad-max-nombre" autocomplete="name" type="text"></div>
+      <div class="campo"><label for="ad-max-vivienda">Tipo de vivienda</label><select id="ad-max-vivienda"><option>Casa con patio</option><option>Apartamento</option></select></div>
+      <div class="campo"><label for="ad-max-obs">Observaciones</label><textarea id="ad-max-obs" rows="3" placeholder="Cuéntale a la fundación por qué quieres adoptar"></textarea></div>
+      <label class="btn ancho" for="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</label>
+    </div>
+  </section>
+
+  <section class="vista" id="mascota-bella" aria-label="Detalle de mascota: Bella">
+    <label class="volver" for="v-mascotas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div>
+      <div>
+        <h2>Bella</h2>
+        <div>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Perro de asistencia</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg> 3 años</span>
+          <span class="badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Disponible</span>
+        </div>
+        <dl>
+          <dt>Santuario / fundación</dt><dd>Fundación Huellas</dd>
+          <dt>Estado de salud</dt><dd>Vacunada, esterilizada y con entrenamiento certificado</dd>
+          <dt>Tamaño</dt><dd>Mediano</dd>
+          <dt>Temperamento</dt><dd>Calmada, atenta y muy sensible al estado de ánimo de las personas.</dd>
+        </dl>
+        <p>Perra de asistencia con formación en apoyo emocional. Ideal para quien busca una compañera serena y constante.</p>
+        <label class="btn miel" for="v-form-adopcion-bella" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#corazon"/></svg> Solicitar adopción</label>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>Otras mascotas que también buscan hogar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-mascota-max" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro de asistencia</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Max</h4><div class="meta">Perro de asistencia · 4 años</div></div></label>
+        <label class="tarjeta" for="v-mascota" role="link" tabindex="0"><div class="imagen"><span class="tag">Perro</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg></div><div class="texto"><h4>Luna</h4><div class="meta">Perro · 2 años</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="form-adopcion-bella" aria-label="Solicitud de adopción: Bella">
+    <label class="volver" for="v-mascota-bella" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al detalle</label>
+    <h2>Formulario de solicitud de adopción</h2>
+    <p>Completa tus datos para iniciar el contacto con la fundación correspondiente.</p>
+    <p style="font-weight:600; color:var(--verde)">Adopción de: Bella</p>
+    <div class="panel">
+      <div class="campo"><label for="ad-bella-nombre">Nombre completo</label><input id="ad-bella-nombre" autocomplete="name" type="text"></div>
+      <div class="campo"><label for="ad-bella-vivienda">Tipo de vivienda</label><select id="ad-bella-vivienda"><option>Casa con patio</option><option>Apartamento</option></select></div>
+      <div class="campo"><label for="ad-bella-obs">Observaciones</label><textarea id="ad-bella-obs" rows="3" placeholder="Cuéntale a la fundación por qué quieres adoptar"></textarea></div>
+      <label class="btn ancho" for="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</label>
+    </div>
+  </section>
+
+  <!-- ===== TIENDA: fichas de producto ===== -->
+  <section class="vista" id="producto-humedo" aria-label="Detalle de producto: Alimento húmedo para gatos">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div>
+      <div>
+        <span class="badge">Alimento</span>
+        <h2>Alimento húmedo para gatos</h2>
+        <p class="precio">$12.000</p>
+        <p>Alimento húmedo completo para gatos adultos, con atún y pollo en salsa suave. Aporta hidratación extra y es fácil de digerir.</p>
+        <dl>
+          <dt>Marca</dt><dd>MiauGourmet</dd>
+          <dt>Presentación</dt><dd>Lata 170 g</dd>
+          <dt>Stock disponible</dt><dd>24 unidades</dd>
+        </dl>
+        <div class="botones">
+          <label class="btn miel" for="v-carrito" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Agregar al carrito</label>
+          <label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label>
+        </div>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>También te puede interesar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Concentrado Premium 3kg</h4><div class="meta">Alimento · $68.000</div></div></label>
+        <label class="tarjeta" for="v-producto-snacks" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Snacks dentales</h4><div class="meta">Alimento · $19.000</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="producto-snacks" aria-label="Detalle de producto: Snacks dentales">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div>
+      <div>
+        <span class="badge">Alimento</span>
+        <h2>Snacks dentales</h2>
+        <p class="precio">$19.000</p>
+        <p>Premios masticables que ayudan a reducir el sarro y a refrescar el aliento de los perros adultos. Sin colorantes artificiales.</p>
+        <dl>
+          <dt>Marca</dt><dd>NutriCan</dd>
+          <dt>Presentación</dt><dd>Bolsa 200 g</dd>
+          <dt>Stock disponible</dt><dd>18 unidades</dd>
+        </dl>
+        <div class="botones">
+          <label class="btn miel" for="v-carrito" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Agregar al carrito</label>
+          <label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label>
+        </div>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>También te puede interesar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Concentrado Premium 3kg</h4><div class="meta">Alimento · $68.000</div></div></label>
+        <label class="tarjeta" for="v-producto-humedo" role="link" tabindex="0"><div class="imagen"><span class="tag">Alimento</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Alimento húmedo para gatos</h4><div class="meta">Alimento · $12.000</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="producto-shampoo" aria-label="Detalle de producto: Shampoo hipoalergénico">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div>
+      <div>
+        <span class="badge">Higiene</span>
+        <h2>Shampoo hipoalergénico</h2>
+        <p class="precio">$27.000</p>
+        <p>Fórmula suave y sin fragancias fuertes, pensada para pieles sensibles. Apto para perros y gatos.</p>
+        <dl>
+          <dt>Marca</dt><dd>PielSana</dd>
+          <dt>Presentación</dt><dd>Frasco 500 ml</dd>
+          <dt>Stock disponible</dt><dd>15 unidades</dd>
+        </dl>
+        <div class="botones">
+          <label class="btn miel" for="v-carrito" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Agregar al carrito</label>
+          <label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label>
+        </div>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>También te puede interesar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto-toallitas" role="link" tabindex="0"><div class="imagen"><span class="tag">Higiene</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Toallitas húmedas</h4><div class="meta">Higiene · $15.000</div></div></label>
+        <label class="tarjeta" for="v-producto-arena" role="link" tabindex="0"><div class="imagen"><span class="tag">Higiene</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Arena sanitaria aglomerante</h4><div class="meta">Higiene · $32.000</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="producto-toallitas" aria-label="Detalle de producto: Toallitas húmedas">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div>
+      <div>
+        <span class="badge">Higiene</span>
+        <h2>Toallitas húmedas</h2>
+        <p class="precio">$15.000</p>
+        <p>Toallitas para limpiar de forma rápida las patas, el pelaje y las zonas sensibles después del paseo. Textura suave y sin alcohol.</p>
+        <dl>
+          <dt>Marca</dt><dd>PielSana</dd>
+          <dt>Presentación</dt><dd>Paquete de 80 unidades</dd>
+          <dt>Stock disponible</dt><dd>30 unidades</dd>
+        </dl>
+        <div class="botones">
+          <label class="btn miel" for="v-carrito" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Agregar al carrito</label>
+          <label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label>
+        </div>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>También te puede interesar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto-shampoo" role="link" tabindex="0"><div class="imagen"><span class="tag">Higiene</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Shampoo hipoalergénico</h4><div class="meta">Higiene · $27.000</div></div></label>
+        <label class="tarjeta" for="v-producto-arena" role="link" tabindex="0"><div class="imagen"><span class="tag">Higiene</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Arena sanitaria aglomerante</h4><div class="meta">Higiene · $32.000</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="producto-arena" aria-label="Detalle de producto: Arena sanitaria aglomerante">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div>
+      <div>
+        <span class="badge">Higiene</span>
+        <h2>Arena sanitaria aglomerante</h2>
+        <p class="precio">$32.000</p>
+        <p>Arena de alta absorción que forma bloques compactos y controla los olores. Baja en polvo y fácil de limpiar.</p>
+        <dl>
+          <dt>Marca</dt><dd>ArenaFresh</dd>
+          <dt>Presentación</dt><dd>Bolsa 5 kg</dd>
+          <dt>Stock disponible</dt><dd>20 unidades</dd>
+        </dl>
+        <div class="botones">
+          <label class="btn miel" for="v-carrito" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Agregar al carrito</label>
+          <label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label>
+        </div>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>También te puede interesar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto-shampoo" role="link" tabindex="0"><div class="imagen"><span class="tag">Higiene</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Shampoo hipoalergénico</h4><div class="meta">Higiene · $27.000</div></div></label>
+        <label class="tarjeta" for="v-producto-toallitas" role="link" tabindex="0"><div class="imagen"><span class="tag">Higiene</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Toallitas húmedas</h4><div class="meta">Higiene · $15.000</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="producto-correa" aria-label="Detalle de producto: Correa reflectiva">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div>
+      <div>
+        <span class="badge">Accesorios</span>
+        <h2>Correa reflectiva</h2>
+        <p class="precio">$35.000</p>
+        <p>Correa resistente con costuras reforzadas y franjas reflectivas para paseos nocturnos más seguros. Agarre acolchado.</p>
+        <dl>
+          <dt>Marca</dt><dd>PasoSeguro</dd>
+          <dt>Presentación</dt><dd>Largo 1,5 m</dd>
+          <dt>Stock disponible</dt><dd>14 unidades</dd>
+        </dl>
+        <div class="botones">
+          <label class="btn miel" for="v-carrito" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Agregar al carrito</label>
+          <label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label>
+        </div>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>También te puede interesar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto-rascador" role="link" tabindex="0"><div class="imagen"><span class="tag">Accesorios</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Rascador para gatos</h4><div class="meta">Accesorios · $89.000</div></div></label>
+        <label class="tarjeta" for="v-producto-cama" role="link" tabindex="0"><div class="imagen"><span class="tag">Accesorios</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Cama acolchada mediana</h4><div class="meta">Accesorios · $75.000</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="producto-rascador" aria-label="Detalle de producto: Rascador para gatos">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div>
+      <div>
+        <span class="badge">Accesorios</span>
+        <h2>Rascador para gatos</h2>
+        <p class="precio">$89.000</p>
+        <p>Torre con superficies de sisal para afilar las uñas, plataformas para descansar y un nivel para esconderse. Base estable.</p>
+        <dl>
+          <dt>Marca</dt><dd>GatoAlto</dd>
+          <dt>Presentación</dt><dd>Torre de 3 niveles, 80 cm</dd>
+          <dt>Stock disponible</dt><dd>6 unidades</dd>
+        </dl>
+        <div class="botones">
+          <label class="btn miel" for="v-carrito" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Agregar al carrito</label>
+          <label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label>
+        </div>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>También te puede interesar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto-correa" role="link" tabindex="0"><div class="imagen"><span class="tag">Accesorios</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Correa reflectiva</h4><div class="meta">Accesorios · $35.000</div></div></label>
+        <label class="tarjeta" for="v-producto-cama" role="link" tabindex="0"><div class="imagen"><span class="tag">Accesorios</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Cama acolchada mediana</h4><div class="meta">Accesorios · $75.000</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <section class="vista" id="producto-cama" aria-label="Detalle de producto: Cama acolchada mediana">
+    <label class="volver" for="v-tienda" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al catálogo</label>
+    <div class="detalle">
+      <div class="foto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div>
+      <div>
+        <span class="badge">Accesorios</span>
+        <h2>Cama acolchada mediana</h2>
+        <p class="precio">$75.000</p>
+        <p>Cama acolchada con base antideslizante y funda lavable. Ideal para perros y gatos de tamaño mediano.</p>
+        <dl>
+          <dt>Marca</dt><dd>DulceSueño</dd>
+          <dt>Presentación</dt><dd>Mediana, 70 × 55 cm</dd>
+          <dt>Stock disponible</dt><dd>9 unidades</dd>
+        </dl>
+        <div class="botones">
+          <label class="btn miel" for="v-carrito" role="button" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Agregar al carrito</label>
+          <label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label>
+        </div>
+      </div>
+    </div>
+    <section class="bloque">
+      <div class="bloque-titulo"><h2>También te puede interesar</h2></div>
+      <div class="grilla">
+        <label class="tarjeta" for="v-producto-correa" role="link" tabindex="0"><div class="imagen"><span class="tag">Accesorios</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Correa reflectiva</h4><div class="meta">Accesorios · $35.000</div></div></label>
+        <label class="tarjeta" for="v-producto-rascador" role="link" tabindex="0"><div class="imagen"><span class="tag">Accesorios</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg></div><div class="texto"><h4>Rascador para gatos</h4><div class="meta">Accesorios · $89.000</div></div></label>
+      </div>
+    </section>
+  </section>
+
+  <!-- ===== VETERINARIAS: fichas y citas ===== -->
+  <section class="vista" id="vet-patitas" aria-label="Detalle de veterinaria: Veterinaria Patitas Felices">
+    <label class="volver" for="v-veterinarias" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al directorio</label>
+    <h2>Veterinaria Patitas Felices</h2>
+    <div class="datos">
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#pin"/></svg></span>Cll 80 #22-10, Bogotá</div>
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#telefono"/></svg></span>(601) 555-0123</div>
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg></span>Lun–Dom, 9:00–19:00</div>
+    </div>
+    <div class="subtitulo">Servicios</div>
+    <div>
+      <span class="badge">Consulta general</span><span class="badge">Vacunación</span><span class="badge">Desparasitación</span><span class="badge">Peluquería</span><span class="badge">Urgencias</span>
+    </div>
+    <div class="subtitulo">Precios y reserva</div>
+    <div style="margin-bottom:22px">
+      <div class="fila-precio"><span class="nombre">Consulta general</span><span class="valor">$50.000</span><label class="btn chico borde" for="v-form-cita-patitas" role="link" tabindex="0" aria-label="Reservar Consulta general">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Vacunación</span><span class="valor">$38.000</span><label class="btn chico borde" for="v-form-cita-patitas" role="link" tabindex="0" aria-label="Reservar Vacunación">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Desparasitación</span><span class="valor">$28.000</span><label class="btn chico borde" for="v-form-cita-patitas" role="link" tabindex="0" aria-label="Reservar Desparasitación">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Peluquería</span><span class="valor">$42.000</span><label class="btn chico borde" for="v-form-cita-patitas" role="link" tabindex="0" aria-label="Reservar Peluquería">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Urgencias</span><span class="valor">$95.000</span><label class="btn chico borde" for="v-form-cita-patitas" role="link" tabindex="0" aria-label="Reservar Urgencias">Reservar</label></div>
+    </div>
+    <label class="btn miel" for="v-form-cita-patitas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#calendario"/></svg> Solicitar cita</label>
+  </section>
+
+  <section class="vista" id="form-cita-patitas" aria-label="Solicitud de cita: Veterinaria Patitas Felices">
+    <label class="volver" for="v-vet-patitas" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al establecimiento</label>
+    <h2>Solicitud de cita</h2>
+    <p style="font-weight:600; color:var(--verde)">Establecimiento: Veterinaria Patitas Felices</p>
+    <div class="panel">
+      <div class="campo"><label for="ct-patitas-servicio">Servicio</label>
+        <select id="ct-patitas-servicio"><option>Consulta general — $50.000</option><option>Vacunación — $38.000</option><option>Desparasitación — $28.000</option><option>Peluquería — $42.000</option><option>Urgencias — $95.000</option></select>
+      </div>
+      <div class="campo"><label for="ct-patitas-fecha">Fecha</label><input id="ct-patitas-fecha" type="date"></div>
+      <div class="campo"><label for="ct-patitas-hora">Hora</label><input id="ct-patitas-hora" type="time"></div>
+      <label class="btn ancho" for="v-conf-cita" role="button" tabindex="0">Solicitar cita</label>
+    </div>
+  </section>
+
+  <section class="vista" id="vet-norte" aria-label="Detalle de veterinaria: Centro Veterinario Norte">
+    <label class="volver" for="v-veterinarias" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al directorio</label>
+    <h2>Centro Veterinario Norte</h2>
+    <div class="datos">
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#pin"/></svg></span>Av. Suba #110-5, Bogotá</div>
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#telefono"/></svg></span>(601) 555-0147</div>
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg></span>Lun–Vie, 8:00–17:00</div>
+    </div>
+    <div class="subtitulo">Servicios</div>
+    <div>
+      <span class="badge">Consulta general</span><span class="badge">Vacunación</span><span class="badge">Desparasitación</span><span class="badge">Peluquería</span>
+    </div>
+    <div class="subtitulo">Precios y reserva</div>
+    <div style="margin-bottom:22px">
+      <div class="fila-precio"><span class="nombre">Consulta general</span><span class="valor">$42.000</span><label class="btn chico borde" for="v-form-cita-norte" role="link" tabindex="0" aria-label="Reservar Consulta general">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Vacunación</span><span class="valor">$33.000</span><label class="btn chico borde" for="v-form-cita-norte" role="link" tabindex="0" aria-label="Reservar Vacunación">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Desparasitación</span><span class="valor">$22.000</span><label class="btn chico borde" for="v-form-cita-norte" role="link" tabindex="0" aria-label="Reservar Desparasitación">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Peluquería</span><span class="valor">$38.000</span><label class="btn chico borde" for="v-form-cita-norte" role="link" tabindex="0" aria-label="Reservar Peluquería">Reservar</label></div>
+    </div>
+    <label class="btn miel" for="v-form-cita-norte" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#calendario"/></svg> Solicitar cita</label>
+  </section>
+
+  <section class="vista" id="form-cita-norte" aria-label="Solicitud de cita: Centro Veterinario Norte">
+    <label class="volver" for="v-vet-norte" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al establecimiento</label>
+    <h2>Solicitud de cita</h2>
+    <p style="font-weight:600; color:var(--verde)">Establecimiento: Centro Veterinario Norte</p>
+    <div class="panel">
+      <div class="campo"><label for="ct-norte-servicio">Servicio</label>
+        <select id="ct-norte-servicio"><option>Consulta general — $42.000</option><option>Vacunación — $33.000</option><option>Desparasitación — $22.000</option><option>Peluquería — $38.000</option></select>
+      </div>
+      <div class="campo"><label for="ct-norte-fecha">Fecha</label><input id="ct-norte-fecha" type="date"></div>
+      <div class="campo"><label for="ct-norte-hora">Hora</label><input id="ct-norte-hora" type="time"></div>
+      <label class="btn ancho" for="v-conf-cita" role="button" tabindex="0">Solicitar cita</label>
+    </div>
+  </section>
+
+  <section class="vista" id="vet-refugio" aria-label="Detalle de veterinaria: Veterinaria El Refugio">
+    <label class="volver" for="v-veterinarias" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al directorio</label>
+    <h2>Veterinaria El Refugio</h2>
+    <div class="datos">
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#pin"/></svg></span>Cra 7 #63-40, Bogotá</div>
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#telefono"/></svg></span>(601) 555-0168</div>
+      <div class="dato"><span class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#reloj"/></svg></span>Lun–Sáb, 7:30–19:00</div>
+    </div>
+    <div class="subtitulo">Servicios</div>
+    <div>
+      <span class="badge">Consulta general</span><span class="badge">Vacunación</span><span class="badge">Desparasitación</span><span class="badge">Urgencias</span>
+    </div>
+    <div class="subtitulo">Precios y reserva</div>
+    <div style="margin-bottom:22px">
+      <div class="fila-precio"><span class="nombre">Consulta general</span><span class="valor">$48.000</span><label class="btn chico borde" for="v-form-cita-refugio" role="link" tabindex="0" aria-label="Reservar Consulta general">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Vacunación</span><span class="valor">$36.000</span><label class="btn chico borde" for="v-form-cita-refugio" role="link" tabindex="0" aria-label="Reservar Vacunación">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Desparasitación</span><span class="valor">$26.000</span><label class="btn chico borde" for="v-form-cita-refugio" role="link" tabindex="0" aria-label="Reservar Desparasitación">Reservar</label></div>
+      <div class="fila-precio"><span class="nombre">Urgencias</span><span class="valor">$85.000</span><label class="btn chico borde" for="v-form-cita-refugio" role="link" tabindex="0" aria-label="Reservar Urgencias">Reservar</label></div>
+    </div>
+    <label class="btn miel" for="v-form-cita-refugio" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#calendario"/></svg> Solicitar cita</label>
+  </section>
+
+  <section class="vista" id="form-cita-refugio" aria-label="Solicitud de cita: Veterinaria El Refugio">
+    <label class="volver" for="v-vet-refugio" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver al establecimiento</label>
+    <h2>Solicitud de cita</h2>
+    <p style="font-weight:600; color:var(--verde)">Establecimiento: Veterinaria El Refugio</p>
+    <div class="panel">
+      <div class="campo"><label for="ct-refugio-servicio">Servicio</label>
+        <select id="ct-refugio-servicio"><option>Consulta general — $48.000</option><option>Vacunación — $36.000</option><option>Desparasitación — $26.000</option><option>Urgencias — $85.000</option></select>
+      </div>
+      <div class="campo"><label for="ct-refugio-fecha">Fecha</label><input id="ct-refugio-fecha" type="date"></div>
+      <div class="campo"><label for="ct-refugio-hora">Hora</label><input id="ct-refugio-hora" type="time"></div>
+      <label class="btn ancho" for="v-conf-cita" role="button" tabindex="0">Solicitar cita</label>
+    </div>
+  </section>
+
+  <!-- ===== CUENTA: confirmaciones ===== -->
+  <section class="vista" id="conf-perfil" aria-label="Cambios guardados">
+    <div class="confirmacion">
+      <div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div>
+      <h2>Cambios guardados</h2>
+      <p>Los datos de tu perfil se actualizaron correctamente.</p>
+      <label class="btn borde" for="v-cuenta" role="link" tabindex="0">Volver a Mi cuenta</label>
+    </div>
+  </section>
+
+  <section class="vista" id="conf-membresia" aria-label="Membresía activada">
+    <div class="confirmacion">
+      <div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div>
+      <h2>Membresía activada</h2>
+      <p>Tu membresía quedó activa. Ya puedes aprovechar descuentos y prioridad en tus solicitudes de adopción.</p>
+      <label class="btn borde" for="v-cuenta" role="link" tabindex="0">Volver a Mi cuenta</label>
+    </div>
+  </section>
+
+  <section class="vista" id="conf-sello" aria-label="Registro de vacunación enviado">
+    <div class="confirmacion">
+      <div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div>
+      <h2>Registro enviado</h2>
+      <p>Recibimos el registro de vacunación y desparasitación al día de tu mascota. El sello se sumará una vez se verifique.</p>
+      <label class="btn borde" for="v-cuenta" role="link" tabindex="0">Volver a Mi cuenta</label>
+    </div>
+  </section>
+
+  <!-- ===== ADMINISTRACIÓN ===== -->
+  <section class="vista" id="adm-resumen" aria-label="Panel de administración">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><h2>¡Hola! Equipo ilo &amp; oli</h2><span class="pildora">Accediste como administrador</span><div class="panel panel-ancho rendimiento"><div class="rend-cab"><h3>Resumen de rendimiento</h3><div class="filtros-mini" role="group" aria-label="Periodo del resumen"><button type="button" class="chip activo" aria-pressed="true">Últimas 24h</button><button type="button" class="chip" aria-pressed="false">Últimos 7 días</button><button type="button" class="chip" aria-pressed="false">Últimos 30 días</button></div></div><div class="kpis"><div><span>Ventas totales</span><strong>4’120,500 COP</strong></div><div><span>Solicitudes nuevas</span><strong>34</strong></div><div><span>Vistas únicas</span><strong>2,870</strong></div></div><div class="graficas"><figure class="grafica"><figcaption>Tendencia de Ventas (Diaria)</figcaption><svg viewBox="0 0 420 250" role="img" aria-label="Gráfico de líneas: tendencia diaria de ventas, 31 días"><line class="rejilla" x1="54" x2="404" y1="200.0" y2="200.0"/><text x="48" y="203.5" text-anchor="end">0</text><line class="rejilla" x1="54" x2="404" y1="164.0" y2="164.0"/><text x="48" y="167.5" text-anchor="end">1,000</text><line class="rejilla" x1="54" x2="404" y1="128.0" y2="128.0"/><text x="48" y="131.5" text-anchor="end">2,000</text><line class="rejilla" x1="54" x2="404" y1="92.0" y2="92.0"/><text x="48" y="95.5" text-anchor="end">3,000</text><line class="rejilla" x1="54" x2="404" y1="56.0" y2="56.0"/><text x="48" y="59.5" text-anchor="end">4,000</text><line class="rejilla" x1="54" x2="404" y1="20.0" y2="20.0"/><text x="48" y="23.5" text-anchor="end">5,000</text><text x="54.0" y="216" text-anchor="middle">0</text><text x="112.3" y="216" text-anchor="middle">5</text><text x="170.7" y="216" text-anchor="middle">10</text><text x="229.0" y="216" text-anchor="middle">15</text><text x="287.3" y="216" text-anchor="middle">20</text><text x="345.7" y="216" text-anchor="middle">25</text><text x="404.0" y="216" text-anchor="middle">30</text><polyline class="linea" points="54.0,110.0 65.7,164.0 77.3,142.4 89.0,174.8 100.7,146.0 112.3,128.0 124.0,138.8 135.7,124.4 147.3,142.4 159.0,131.6 170.7,92.0 182.3,142.4 194.0,135.2 205.7,110.0 217.3,102.8 229.0,128.0 240.7,113.6 252.3,131.6 264.0,135.2 275.7,117.2 287.3,92.0 299.0,120.8 310.7,149.6 322.3,77.6 334.0,92.0 345.7,70.4 357.3,142.4 369.0,102.8 380.7,45.2 392.3,81.2 404.0,117.2"/><circle class="punto" cx="54.0" cy="110.0" r="2.3"/><circle class="punto" cx="65.7" cy="164.0" r="2.3"/><circle class="punto" cx="77.3" cy="142.4" r="2.3"/><circle class="punto" cx="89.0" cy="174.8" r="2.3"/><circle class="punto" cx="100.7" cy="146.0" r="2.3"/><circle class="punto" cx="112.3" cy="128.0" r="2.3"/><circle class="punto" cx="124.0" cy="138.8" r="2.3"/><circle class="punto" cx="135.7" cy="124.4" r="2.3"/><circle class="punto" cx="147.3" cy="142.4" r="2.3"/><circle class="punto" cx="159.0" cy="131.6" r="2.3"/><circle class="punto" cx="170.7" cy="92.0" r="2.3"/><circle class="punto" cx="182.3" cy="142.4" r="2.3"/><circle class="punto" cx="194.0" cy="135.2" r="2.3"/><circle class="punto" cx="205.7" cy="110.0" r="2.3"/><circle class="punto" cx="217.3" cy="102.8" r="2.3"/><circle class="punto" cx="229.0" cy="128.0" r="2.3"/><circle class="punto" cx="240.7" cy="113.6" r="2.3"/><circle class="punto" cx="252.3" cy="131.6" r="2.3"/><circle class="punto" cx="264.0" cy="135.2" r="2.3"/><circle class="punto" cx="275.7" cy="117.2" r="2.3"/><circle class="punto" cx="287.3" cy="92.0" r="2.3"/><circle class="punto" cx="299.0" cy="120.8" r="2.3"/><circle class="punto" cx="310.7" cy="149.6" r="2.3"/><circle class="punto" cx="322.3" cy="77.6" r="2.3"/><circle class="punto" cx="334.0" cy="92.0" r="2.3"/><circle class="punto" cx="345.7" cy="70.4" r="2.3"/><circle class="punto" cx="357.3" cy="142.4" r="2.3"/><circle class="punto" cx="369.0" cy="102.8" r="2.3"/><circle class="punto" cx="380.7" cy="45.2" r="2.3"/><circle class="punto" cx="392.3" cy="81.2" r="2.3"/><circle class="punto" cx="404.0" cy="117.2" r="2.3"/><text x="229" y="238" text-anchor="middle">Fecha</text><text x="12" y="110" text-anchor="middle" transform="rotate(-90 12 110)">Ventas ($)</text></svg></figure><figure class="grafica"><figcaption>Fuentes de Tráfico</figcaption><svg viewBox="0 0 370 250" role="img" aria-label="Gráfico de barras: fuentes de tráfico. Búsqueda orgánica 44%, redes sociales 32%, directo 13%, referencias 9%"><line class="rejilla" x1="108.0" x2="108.0" y1="18" y2="190"/><text x="108.0" y="206" text-anchor="middle">0%</text><line class="rejilla" x1="156.0" x2="156.0" y1="18" y2="190"/><text x="156.0" y="206" text-anchor="middle">10%</text><line class="rejilla" x1="204.0" x2="204.0" y1="18" y2="190"/><text x="204.0" y="206" text-anchor="middle">20%</text><line class="rejilla" x1="252.0" x2="252.0" y1="18" y2="190"/><text x="252.0" y="206" text-anchor="middle">30%</text><line class="rejilla" x1="300.0" x2="300.0" y1="18" y2="190"/><text x="300.0" y="206" text-anchor="middle">40%</text><line class="rejilla" x1="348.0" x2="348.0" y1="18" y2="190"/><text x="348.0" y="206" text-anchor="middle">50%</text><text x="100" y="44" text-anchor="end">Búsqueda Orgánica</text><rect class="barra" x="108" y="28" width="211.2" height="24" rx="3"/><text x="100" y="84" text-anchor="end">Redes Sociales</text><rect class="barra" x="108" y="68" width="153.6" height="24" rx="3"/><text x="100" y="124" text-anchor="end">Directo</text><rect class="barra" x="108" y="108" width="62.4" height="24" rx="3"/><text x="100" y="164" text-anchor="end">Referencias</text><rect class="barra" x="108" y="148" width="43.2" height="24" rx="3"/></svg></figure></div></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-solicitudes" aria-label="Solicitudes de adopción">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><h2>Solicitudes de adopción</h2><p>Revisa las solicitudes recibidas para las mascotas.</p><div class="filtros" role="group" aria-label="Filtrar"><button type="button" class="chip activo" aria-pressed="true">Todas</button><button type="button" class="chip" aria-pressed="false">Pendientes</button><button type="button" class="chip" aria-pressed="false">Aprobadas</button></div><div class="panel panel-ancho" style="margin-bottom:14px"><div class="rend-cab"><h3>Adopción de Luna</h3><span class="estado pendiente">Pendiente</span></div><dl><dt>Santuario / fundación</dt><dd>Fundación Huellas</dd><dt>Solicitante</dt><dd>Camila Ríos</dd><dt>Correo</dt><dd>camila@correo.com</dd><dt>Tipo de vivienda</dt><dd>Casa con patio</dd></dl><div class="botones" style="margin-top:14px"><label class="btn chico" for="v-adm-conf-aprobada" role="button" tabindex="0" aria-label="Aprobar solicitud de Luna"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Aprobar</label><label class="btn chico borde" for="v-adm-conf-rechazada" role="button" tabindex="0" aria-label="Rechazar solicitud de Luna">Rechazar</label></div></div><div class="panel panel-ancho" style="margin-bottom:14px"><div class="rend-cab"><h3>Adopción de Rocco</h3><span class="estado pendiente">Pendiente</span></div><dl><dt>Santuario / fundación</dt><dd>Fundación Huellas</dd><dt>Solicitante</dt><dd>Andrés Gómez</dd><dt>Correo</dt><dd>andres@correo.com</dd><dt>Tipo de vivienda</dt><dd>Apartamento</dd></dl><div class="botones" style="margin-top:14px"><label class="btn chico" for="v-adm-conf-aprobada" role="button" tabindex="0" aria-label="Aprobar solicitud de Rocco"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg> Aprobar</label><label class="btn chico borde" for="v-adm-conf-rechazada" role="button" tabindex="0" aria-label="Rechazar solicitud de Rocco">Rechazar</label></div></div><div class="panel panel-ancho" style="margin-bottom:14px"><div class="rend-cab"><h3>Adopción de Mishi</h3><span class="estado ">Aprobada</span></div><dl><dt>Santuario / fundación</dt><dd>Fundación Huellas</dd><dt>Solicitante</dt><dd>Laura Pérez</dd><dt>Correo</dt><dd>laura@correo.com</dd><dt>Tipo de vivienda</dt><dd>Apartamento</dd></dl></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-conf-aprobada" aria-label="Solicitud aprobada">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><div class="confirmacion"><div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div><h2>Solicitud aprobada</h2><p>La solicitud de adopción quedó aprobada. La persona verá el nuevo estado en su cuenta.</p><label class="btn borde" for="v-adm-solicitudes" role="link" tabindex="0">Volver a solicitudes</label></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-conf-rechazada" aria-label="Solicitud rechazada">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><div class="confirmacion"><div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div><h2>Solicitud rechazada</h2><p>La solicitud de adopción quedó rechazada. La persona verá el nuevo estado en su cuenta.</p><label class="btn borde" for="v-adm-solicitudes" role="link" tabindex="0">Volver a solicitudes</label></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-inventarios" aria-label="Inventarios">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><h2>Inventarios</h2><p>Mascotas en adopción y productos de la tienda.</p><div class="bloque-titulo" style="margin-top:20px"><h3>Mascotas en adopción</h3><label class="btn chico" for="v-adm-mascota-nueva" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#paw"/></svg> Agregar mascota</label></div><div class="fila-admin"><div class="info"><b>Luna</b><span>Perro · 2 años</span></div><span class="estado">Disponible</span></div><div class="fila-admin"><div class="info"><b>Rocco</b><span>Perro · 5 años</span></div><span class="estado">Disponible</span></div><div class="fila-admin"><div class="info"><b>Toby</b><span>Perro · 8 meses</span></div><span class="estado">Disponible</span></div><div class="fila-admin"><div class="info"><b>Mishi</b><span>Gato · 1 año</span></div><span class="estado">Disponible</span></div><div class="fila-admin"><div class="info"><b>Simón</b><span>Gato · 3 años</span></div><span class="estado">Disponible</span></div><div class="fila-admin"><div class="info"><b>Nube</b><span>Gato · 6 meses</span></div><span class="estado">Disponible</span></div><div class="fila-admin"><div class="info"><b>Max</b><span>Perro de asistencia · 4 años</span></div><span class="estado">Disponible</span></div><div class="fila-admin"><div class="info"><b>Bella</b><span>Perro de asistencia · 3 años</span></div><span class="estado">Disponible</span></div><div class="bloque-titulo" style="margin-top:28px"><h3>Productos</h3><label class="btn chico" for="v-adm-producto-nuevo" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#bolsa"/></svg> Crear producto</label></div><div class="fila-admin"><div class="info"><b>Concentrado Premium 3kg</b><span>Alimento · Stock: 12 unidades</span></div><label class="sr-only" for="un-0">Unidades a agregar de Concentrado Premium 3kg</label><input id="un-0" type="number" min="1" inputmode="numeric" placeholder="Unidades"><label class="btn chico borde" for="v-adm-conf-inventario" role="button" tabindex="0" aria-label="Agregar unidades de Concentrado Premium 3kg">Agregar unidades</label></div><div class="fila-admin"><div class="info"><b>Alimento húmedo para gatos</b><span>Alimento · Stock: 24 unidades</span></div><label class="sr-only" for="un-1">Unidades a agregar de Alimento húmedo para gatos</label><input id="un-1" type="number" min="1" inputmode="numeric" placeholder="Unidades"><label class="btn chico borde" for="v-adm-conf-inventario" role="button" tabindex="0" aria-label="Agregar unidades de Alimento húmedo para gatos">Agregar unidades</label></div><div class="fila-admin"><div class="info"><b>Snacks dentales</b><span>Alimento · Stock: 18 unidades</span></div><label class="sr-only" for="un-2">Unidades a agregar de Snacks dentales</label><input id="un-2" type="number" min="1" inputmode="numeric" placeholder="Unidades"><label class="btn chico borde" for="v-adm-conf-inventario" role="button" tabindex="0" aria-label="Agregar unidades de Snacks dentales">Agregar unidades</label></div><div class="fila-admin"><div class="info"><b>Shampoo hipoalergénico</b><span>Higiene · Stock: 15 unidades</span></div><label class="sr-only" for="un-3">Unidades a agregar de Shampoo hipoalergénico</label><input id="un-3" type="number" min="1" inputmode="numeric" placeholder="Unidades"><label class="btn chico borde" for="v-adm-conf-inventario" role="button" tabindex="0" aria-label="Agregar unidades de Shampoo hipoalergénico">Agregar unidades</label></div><div class="fila-admin"><div class="info"><b>Toallitas húmedas</b><span>Higiene · Stock: 30 unidades</span></div><label class="sr-only" for="un-4">Unidades a agregar de Toallitas húmedas</label><input id="un-4" type="number" min="1" inputmode="numeric" placeholder="Unidades"><label class="btn chico borde" for="v-adm-conf-inventario" role="button" tabindex="0" aria-label="Agregar unidades de Toallitas húmedas">Agregar unidades</label></div><div class="fila-admin"><div class="info"><b>Arena sanitaria aglomerante</b><span>Higiene · Stock: 20 unidades</span></div><label class="sr-only" for="un-5">Unidades a agregar de Arena sanitaria aglomerante</label><input id="un-5" type="number" min="1" inputmode="numeric" placeholder="Unidades"><label class="btn chico borde" for="v-adm-conf-inventario" role="button" tabindex="0" aria-label="Agregar unidades de Arena sanitaria aglomerante">Agregar unidades</label></div><div class="fila-admin"><div class="info"><b>Correa reflectiva</b><span>Accesorios · Stock: 14 unidades</span></div><label class="sr-only" for="un-6">Unidades a agregar de Correa reflectiva</label><input id="un-6" type="number" min="1" inputmode="numeric" placeholder="Unidades"><label class="btn chico borde" for="v-adm-conf-inventario" role="button" tabindex="0" aria-label="Agregar unidades de Correa reflectiva">Agregar unidades</label></div><div class="fila-admin"><div class="info"><b>Rascador para gatos</b><span>Accesorios · Stock: 6 unidades</span></div><label class="sr-only" for="un-7">Unidades a agregar de Rascador para gatos</label><input id="un-7" type="number" min="1" inputmode="numeric" placeholder="Unidades"><label class="btn chico borde" for="v-adm-conf-inventario" role="button" tabindex="0" aria-label="Agregar unidades de Rascador para gatos">Agregar unidades</label></div><div class="fila-admin"><div class="info"><b>Cama acolchada mediana</b><span>Accesorios · Stock: 9 unidades</span></div><label class="sr-only" for="un-8">Unidades a agregar de Cama acolchada mediana</label><input id="un-8" type="number" min="1" inputmode="numeric" placeholder="Unidades"><label class="btn chico borde" for="v-adm-conf-inventario" role="button" tabindex="0" aria-label="Agregar unidades de Cama acolchada mediana">Agregar unidades</label></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-mascota-nueva" aria-label="Agregar mascota">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><label class="volver" for="v-adm-inventarios" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver a inventarios</label><h2>Agregar mascota</h2><p>Publica una mascota para que aparezca en el catálogo de adopción.</p><div class="panel"><div class="campo"><label for="mn-nombre">Nombre</label><input id="mn-nombre" type="text"></div><div class="campo"><label for="mn-tipo">Tipo</label><select id="mn-tipo"><option>Perro</option><option>Gato</option><option>Perro de asistencia</option></select></div><div class="campo"><label for="mn-edad">Edad</label><input id="mn-edad" type="text"></div><div class="campo"><label for="mn-tamano">Tamaño</label><select id="mn-tamano"><option>Pequeño</option><option>Mediano</option><option>Grande</option></select></div><div class="campo"><label for="mn-fundacion">Santuario / fundación</label><select id="mn-fundacion"><option>Fundación Huellas</option><option>Santuario Patitas</option></select></div><div class="campo"><label for="mn-salud">Estado de salud</label><input id="mn-salud" type="text"></div><div class="campo"><label for="mn-temp">Temperamento</label><textarea id="mn-temp" rows="3"></textarea></div><label class="btn ancho" for="v-adm-conf-inventario" role="button" tabindex="0">Publicar mascota</label></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-producto-nuevo" aria-label="Crear producto">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><label class="volver" for="v-adm-inventarios" role="link" tabindex="0"><svg class="icon" aria-hidden="true" focusable="false"><use href="#atras"/></svg> Volver a inventarios</label><h2>Crear producto</h2><p>Agrega un producto al catálogo de la tienda.</p><div class="panel"><div class="campo"><label for="pn-nombre">Nombre del producto</label><input id="pn-nombre" type="text"></div><div class="campo"><label for="pn-categoria">Categoría</label><select id="pn-categoria"><option>Alimento</option><option>Higiene</option><option>Accesorios</option></select></div><div class="campo"><label for="pn-marca">Marca</label><input id="pn-marca" type="text"></div><div class="campo"><label for="pn-presentacion">Presentación</label><input id="pn-presentacion" type="text"></div><div class="campo"><label for="pn-precio">Precio (COP)</label><input id="pn-precio" type="number" min="0" inputmode="numeric"></div><div class="campo"><label for="pn-stock">Unidades disponibles</label><input id="pn-stock" type="number" min="0" inputmode="numeric"></div><div class="campo"><label for="pn-desc">Descripción</label><textarea id="pn-desc" rows="3"></textarea></div><label class="btn ancho" for="v-adm-conf-inventario" role="button" tabindex="0">Crear producto</label></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-conf-inventario" aria-label="Inventario actualizado">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><div class="confirmacion"><div class="circulo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#check"/></svg></div><h2>Inventario actualizado</h2><p>El cambio quedó guardado en el inventario.</p><label class="btn borde" for="v-adm-inventarios" role="link" tabindex="0">Volver a inventarios</label></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-ingresos" aria-label="Ingresos">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><h2>Ingresos</h2><p>Ventas de la tienda y donaciones recibidas.</p><div class="panel panel-ancho"><div class="kpis uno"><div><span>Ventas totales</span><strong>4’120,500 COP</strong></div></div></div><h3 style="margin-top:28px">Movimientos recientes</h3><div class="fila-admin"><div class="info"><b>Pedido #P-0142</b><span>Tienda</span></div><span class="valor-fila">$122.000</span></div><div class="fila-admin"><div class="info"><b>Donación</b><span>Fundación Huellas</span></div><span class="valor-fila">$50.000</span></div><div class="fila-admin"><div class="info"><b>Pedido #P-0141</b><span>Tienda</span></div><span class="valor-fila">$68.000</span></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-sellos" aria-label="Sellos y membresía">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><h2>Sellos y membresía</h2><p>Verifica los registros de vacunación y desparasitación para sumar sellos, y consulta las membresías.</p><h3 style="margin-top:20px">Registros por verificar</h3><div class="fila-admin"><div class="info"><b>Camila Ríos</b><span>Vacunación al día</span></div><span class="estado pendiente" aria-live="polite">Pendiente</span><div class="acciones"><button type="button" class="btn chico" data-resultado="verificado" aria-label="Verificar registro de Camila Ríos">Verificar</button><button type="button" class="btn chico borde" data-resultado="rechazado" aria-label="Rechazar registro de Camila Ríos">Rechazar</button></div></div><div class="fila-admin"><div class="info"><b>Andrés Gómez</b><span>Desparasitación al día</span></div><span class="estado pendiente" aria-live="polite">Pendiente</span><div class="acciones"><button type="button" class="btn chico" data-resultado="verificado" aria-label="Verificar registro de Andrés Gómez">Verificar</button><button type="button" class="btn chico borde" data-resultado="rechazado" aria-label="Rechazar registro de Andrés Gómez">Rechazar</button></div></div><div class="fila-admin"><div class="info"><b>Laura Pérez</b><span>Vacunación al día</span></div><span class="estado " aria-live="polite">Verificado</span></div><h3 style="margin-top:28px">Membresías</h3><div class="fila-admin"><div class="info"><b>Camila Ríos</b><span>3 de 6 sellos</span></div><span class="estado">Activa</span></div><div class="fila-admin"><div class="info"><b>Laura Pérez</b><span>4 de 6 sellos</span></div><span class="estado">Activa</span></div></div></div>
+  </section>
+
+  <section class="vista" id="adm-config" aria-label="Configuración">
+    <div class="admin"><aside class="lateral" aria-label="Menú de administración"><div class="avatar" aria-hidden="true"><svg class="icon"><use href="#persona"/></svg></div><ul><li><label for="v-adm-resumen" role="link" tabindex="0">Inicio / Resumen</label></li><li><label for="v-adm-solicitudes" role="link" tabindex="0">Solicitudes</label></li><li><label for="v-adm-inventarios" role="link" tabindex="0">Inventarios</label></li><li><label for="v-adm-ingresos" role="link" tabindex="0">Ingresos</label></li><li><label for="v-adm-sellos" role="link" tabindex="0">Sellos y membresía</label></li><li class="separador" aria-hidden="true"></li><li><label for="v-adm-config" role="link" tabindex="0">Configuración</label></li></ul></aside><div class="admin-contenido"><h2>Configuración</h2><p>Datos de la cuenta de administración.</p><div class="panel"><div class="campo"><label for="cf-nombre">Nombre</label><input id="cf-nombre" type="text" value="Equipo ilo &amp; oli" readonly></div><div class="campo"><label for="cf-correo">Correo electrónico</label><input id="cf-correo" type="email" value="admin@iloyoli.co" readonly></div><label class="btn chico borde" for="v-inicio" role="button" tabindex="0" data-accion="logout">Cerrar sesión</label></div></div></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="pie">
+    <div>
+      <div class="logo" style="margin-bottom:10px"><span>ilo</span><span>&amp; oli</span></div>
+      <p style="font-size:.88rem; max-width:34ch">Adopción responsable, productos de cuidado y veterinarias, en un solo lugar.</p>
+    </div>
+    <div>
+      <h4>Explora</h4>
+      <ul><li><label for="v-mascotas" role="link" tabindex="0">Adopta</label></li><li><label for="v-veterinarias" role="link" tabindex="0">Servicios</label></li><li><label for="v-tienda" role="link" tabindex="0">Tienda</label></li><li><label for="v-donaciones" role="link" tabindex="0">Donaciones</label></li></ul>
+    </div>
+    <div>
+      <h4>Cuenta</h4>
+      <ul><li><label for="v-acceso" role="link" tabindex="0">Iniciar sesión</label></li><li><label for="v-cuenta" role="link" tabindex="0">Mi cuenta</label></li><li><label for="v-membresia" role="link" tabindex="0">Membresía y sellos</label></li></ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul><li>hola@iloyoli.co</li><li>Bogotá, Colombia</li></ul>
+    </div>
+  </div>
+  <div class="pie-final"> Corte 3, Tecnologías de Internet</div>
+</footer>
+
+<script>
+/* Accesibilidad + sesión: el prototipo navega con radios + label (solo CSS).
+   Este script agrega lo que el CSS no puede: activar con teclado, mover el foco
+   al cambiar de pantalla, mantener los estados ARIA y manejar la sesión
+   (usuario o administrador) mientras la página permanezca abierta. */
+(function () {
+  var SUFIJO = ' · ilo & oli';
+  var GRUPOS = {
+    'v-mascotas': ['v-mascotas', 'v-mascota', 'v-form-adopcion', 'v-conf-adopcion', 'v-mascota-rocco', 'v-mascota-toby', 'v-mascota-mishi', 'v-mascota-simon', 'v-mascota-nube', 'v-mascota-max', 'v-mascota-bella', 'v-form-adopcion-rocco', 'v-form-adopcion-toby', 'v-form-adopcion-mishi', 'v-form-adopcion-simon', 'v-form-adopcion-nube', 'v-form-adopcion-max', 'v-form-adopcion-bella'],
+    'v-veterinarias': ['v-veterinarias', 'v-vet', 'v-form-cita', 'v-conf-cita', 'v-vet-patitas', 'v-vet-norte', 'v-vet-refugio', 'v-form-cita-patitas', 'v-form-cita-norte', 'v-form-cita-refugio'],
+    'v-tienda': ['v-tienda', 'v-producto', 'v-carrito', 'v-pago', 'v-conf-pedido', 'v-producto-humedo', 'v-producto-snacks', 'v-producto-shampoo', 'v-producto-toallitas', 'v-producto-arena', 'v-producto-correa', 'v-producto-rascador', 'v-producto-cama'],
+    'v-donaciones': ['v-donaciones', 'v-conf-donacion'],
+    'v-cuenta': ['v-cuenta', 'v-membresia', 'v-conf-perfil', 'v-conf-membresia', 'v-conf-sello'],
+    /* Administración */
+    'v-adm-resumen': ['v-adm-resumen'],
+    'v-adm-solicitudes': ['v-adm-solicitudes', 'v-adm-conf-aprobada', 'v-adm-conf-rechazada'],
+    'v-adm-inventarios': ['v-adm-inventarios', 'v-adm-mascota-nueva', 'v-adm-producto-nuevo', 'v-adm-conf-inventario'],
+    'v-adm-ingresos': ['v-adm-ingresos'],
+    'v-adm-sellos': ['v-adm-sellos'],
+    'v-adm-config': ['v-adm-config']
+  };
+
+  /* ---- Sesión (solo en memoria: al recargar vuelve a estar cerrada) ---- */
+  var sesion = null;      // null | 'usuario' | 'admin'
+  var pendiente = null;   // pantalla a la que la persona quería ir antes de iniciar sesión
+  var CUENTA = ['v-cuenta', 'v-membresia', 'v-conf-perfil', 'v-conf-membresia', 'v-conf-sello'];
+  var ADMIN = Array.prototype.map.call(document.querySelectorAll('input.pantalla[id^="v-adm-"]'), function (r) { return r.id; });
+  var viaPestana = false;
+  var REQUIERE_SESION = ['v-pago'];   // el carrito es libre; pagar exige sesión
+
+  function valor(id) { var el = document.getElementById(id); return el ? el.value : ''; }
+  function esAdmin(correo) { return /admin|santuario/i.test(correo || ''); }
+  function esPantalla(id) { var el = document.getElementById(id); return !!el && el.classList.contains('pantalla'); }
+
+  function resolver(destino) {
+    if (destino === 'v-acceso' || destino === 'v-registro') {
+      if (sesion) return sesion === 'admin' ? 'v-adm-resumen' : 'v-cuenta';
+      return destino;
+    }
+    if (REQUIERE_SESION.indexOf(destino) !== -1) {
+      if (!sesion) { pendiente = destino; return 'v-acceso'; }
+    }
+    if (CUENTA.indexOf(destino) !== -1) {
+      if (!sesion) { pendiente = destino; return 'v-acceso'; }
+      if (sesion === 'admin') return 'v-adm-resumen';
+    }
+    if (ADMIN.indexOf(destino) !== -1) {
+      if (!sesion) { pendiente = destino; return 'v-acceso'; }
+      if (sesion !== 'admin') return 'v-cuenta';
+    }
+    return destino;
+  }
+
+  function irA(id) {
+    var radio = document.getElementById(id);
+    if (!radio) return;
+    if (radio.checked) { actualizar(true); return; }
+    radio.checked = true;
+    radio.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+
+  function fijarSesion(valorSesion) {
+    sesion = valorSesion;
+    document.body.classList.toggle('con-sesion', !!sesion);
+  }
+
+  function actualizar(moverFoco) {
+    var radio = document.querySelector('input.pantalla:checked');
+    if (!radio) return;
+    var vista = document.getElementById(radio.id.replace(/^v-/, ''));
+
+    // Barra de administración o de usuario según la pantalla abierta
+    document.body.classList.toggle('modo-admin', radio.id.indexOf('v-adm-') === 0);
+
+    // Página actual en las barras de navegación
+    document.querySelectorAll('nav [for^="v-"], .lateral [for^="v-"], .pestanas-nav [for^="v-"]').forEach(function (el) {
+      var destino = el.getAttribute('for');
+      var grupo = GRUPOS[destino] || [destino];
+      if (grupo.indexOf(radio.id) !== -1) el.setAttribute('aria-current', 'page');
+      else el.removeAttribute('aria-current');
+    });
+
+    // Aviso de "inicia sesión para pagar" (solo si venía del carrito)
+    document.querySelectorAll('.aviso-pago').forEach(function (a) { a.hidden = pendiente !== 'v-pago'; });
+
+    // Título de la pestaña del navegador
+    var nombre = vista && vista.getAttribute('aria-label');
+    document.title = (!nombre || radio.id === 'v-inicio') ? 'ilo & oli' : nombre + SUFIJO;
+
+    if (!moverFoco || !vista) return;
+    window.scrollTo(0, 0);
+    if (viaPestana) {
+      var pestana = vista.querySelector('[role="tab"][aria-selected="true"]');
+      if (pestana) { pestana.focus(); return; }
+    }
+    var titulo = vista.querySelector('h1, h2') || vista;
+    titulo.setAttribute('tabindex', '-1');
+    titulo.focus({ preventScroll: true });
+  }
+
+  // Cambio de pantalla (se dispara al marcarse un radio)
+  document.addEventListener('change', function (e) {
+    if (e.target.classList && e.target.classList.contains('pantalla')) {
+      if (e.target.id !== 'v-acceso' && e.target.id !== 'v-registro') pendiente = null;
+      actualizar(true);
+      viaPestana = false;
+    }
+  });
+
+  // Sesión: se evalúa antes que cualquier otro manejador de clic
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest ? e.target : e.target.parentNode;
+    var lab = t.closest && t.closest('label[for]');
+    if (!lab) return;
+    var destino = lab.getAttribute('for');
+    if (!esPantalla(destino)) return;
+    var accion = lab.getAttribute('data-accion');
+
+    if (accion === 'login' || accion === 'registro') {
+      e.preventDefault();
+      var rol = accion === 'login'
+        ? ((document.getElementById('li-admin') || {}).checked ? 'admin' : 'usuario')
+        : 'usuario';
+      fijarSesion(rol);
+      var casilla = document.getElementById('li-admin'); if (casilla) casilla.checked = false;
+      var quiere = pendiente || 'v-cuenta';
+      pendiente = null;
+      irA(resolver(quiere));
+      return;
+    }
+    if (accion === 'logout') {
+      fijarSesion(null);
+      pendiente = null;
+      return; // continúa hacia la pantalla de inicio
+    }
+
+    var real = resolver(destino);
+    if (real !== destino) { e.preventDefault(); irA(real); }
+  }, true);
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest ? e.target : e.target.parentNode;
+    if (t.closest('[role="tab"]')) viaPestana = true;
+    else if (!t.classList.contains('pantalla')) viaPestana = false;
+
+    // Verificación de registros (Sellos y membresía): el resultado se muestra en la misma fila
+    var res = t.closest('button[data-resultado]');
+    if (res) {
+      var filaR = res.closest('.fila-admin');
+      var est = filaR.querySelector('.estado');
+      var ok = res.getAttribute('data-resultado') === 'verificado';
+      est.textContent = ok ? 'Verificado' : 'Rechazado';
+      est.className = 'estado' + (ok ? '' : ' rechazada');
+      var acc = filaR.querySelector('.acciones');
+      if (acc) acc.remove();
+    }
+
+    // Chips de filtro / monto / periodo: selección única con aria-pressed
+    var chip = t.closest('.chip');
+    if (chip) {
+      Array.prototype.forEach.call(chip.parentNode.children, function (c) {
+        var on = c === chip;
+        c.classList.toggle('activo', on);
+        c.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
+  });
+
+  // Teclado: Enter/Espacio activan los label; flechas mueven entre pestañas
+  document.addEventListener('keydown', function (e) {
+    var el = e.target.closest && e.target.closest('label[tabindex]');
+    if (!el || e.altKey || e.ctrlKey || e.metaKey) return;
+
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      if (!e.repeat) el.click();
+      return;
+    }
+    if (el.getAttribute('role') === 'tab') {
+      var tabs = Array.prototype.slice.call(el.parentNode.querySelectorAll('[role="tab"]'));
+      var i = tabs.indexOf(el), n = tabs.length, sig = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') sig = tabs[(i + 1) % n];
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') sig = tabs[(i - 1 + n) % n];
+      else if (e.key === 'Home') sig = tabs[0];
+      else if (e.key === 'End') sig = tabs[n - 1];
+      if (sig) { e.preventDefault(); if (sig !== el) sig.click(); }
+    }
+  });
+
+
+  /* ---- Filtros y búsqueda de los catálogos (mascotas, tienda, veterinarias) y solicitudes del administrador ---- */
+  function norm(t) { return (t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, ' ').trim(); }
+
+  function etiquetasDe(item) {
+    // Etiqueta de la tarjeta + (veterinarias) servicios que aparecen en la ficha de esa veterinaria
+    var tag = item.querySelector('.tag');
+    var lista = [tag ? norm(tag.textContent) : ''];
+    var id = (item.getAttribute('for') || '').replace(/^v-/, '');
+    var ficha = id && document.getElementById(id);
+    if (ficha && /^vet/.test(id)) {
+      Array.prototype.forEach.call(ficha.querySelectorAll('.badge'), function (b) { lista.push(norm(b.textContent)); });
+    }
+    return lista;
+  }
+
+  function coincide(item, chip, seccion) {
+    var f = norm(chip);
+    if (f === 'todas') return true;
+    if (item.classList.contains('panel')) {                       // solicitudes del administrador
+      var est = item.querySelector('.estado');
+      var e = norm(est ? est.textContent : '');
+      return f.indexOf('pendiente') === 0 ? e.indexOf('pendiente') === 0 : f.indexOf('aprobada') === 0 ? e.indexOf('aprobada') === 0 : true;
+    }
+    var et = etiquetasDe(item);
+    if (seccion === 'mascotas') {
+      if (f === 'perros') return et[0] === 'perro';
+      if (f === 'gatos') return et[0] === 'gato';
+      if (f === 'asistencia') return et[0].indexOf('asistencia') !== -1;
+    }
+    return et.indexOf(f) !== -1;
+  }
+
+  function aplicarFiltro(cont) {
+    var seccion = (cont.closest('.vista') || {}).id;
+    var activo = cont.querySelector('.filtros .chip.activo');
+    var buscador = cont.querySelector('.buscador input');
+    var q = norm(buscador ? buscador.value : '');
+    var items = cont.querySelectorAll('.grilla > .tarjeta, .panel.panel-ancho');
+    var visibles = 0;
+    Array.prototype.forEach.call(items, function (it) {
+      var ok = (!activo || coincide(it, activo.textContent, seccion)) && (!q || norm(it.textContent).indexOf(q) !== -1);
+      it.classList.toggle('oculto', !ok);
+      if (ok) visibles++;
+    });
+    var aviso = cont.querySelector('.sin-resultados');
+    if (!aviso) {
+      aviso = document.createElement('p');
+      aviso.className = 'sin-resultados'; aviso.setAttribute('role', 'status'); aviso.hidden = true;
+      aviso.textContent = 'No encontramos resultados con ese filtro. Prueba con otra opción.';
+      var ref = cont.querySelector('.grilla') || items[items.length - 1];
+      if (ref) ref.parentNode.insertBefore(aviso, ref.nextSibling);
+    }
+    aviso.hidden = visibles !== 0;
+  }
+
+  function contenedorDeFiltro(el) {
+    var c = el.closest('.bloque, .admin-contenido');
+    return c && c.querySelector('.grilla > .tarjeta, .panel.panel-ancho') ? c : null;
+  }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest ? e.target : e.target.parentNode;
+    var chip = t.closest('.filtros .chip');
+    if (!chip) return;
+    var cont = contenedorDeFiltro(chip);
+    if (cont) aplicarFiltro(cont);          // el script de chips (más arriba) ya marcó el activo
+  });
+  document.addEventListener('input', function (e) {
+    if (!e.target.closest || !e.target.closest('.buscador')) return;
+    var cont = contenedorDeFiltro(e.target);
+    if (cont) aplicarFiltro(cont);
+  });
+
+  actualizar(false);
+})();
+</script>
+
+
+</body>
+</html>
