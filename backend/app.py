@@ -83,6 +83,8 @@ def iniciar_db():
         clave = os.environ.get("ADMIN_CLAVE", "Admin123!")
         c.execute("INSERT INTO usuarios(nombre,correo,clave,rol) VALUES(?,?,?,'admin')",
                   ("Equipo ilo & oli", "admin@iloyoli.co", generate_password_hash(clave)))
+        c.execute("INSERT INTO usuarios(nombre,correo,clave,rol) VALUES(?,?,?,'usuario')",
+                  ("Usuario de prueba", "usuario@iloyoli.co", generate_password_hash("Usuario123!")))
         c.executemany("INSERT INTO mascotas(nombre,tipo,edad,tamano,fundacion,salud,temperamento) VALUES(?,?,?,?,?,?,?)", MASCOTAS)
         c.executemany("INSERT INTO productos(nombre,categoria,marca,presentacion,precio,stock) VALUES(?,?,?,?,?,?)", PRODUCTOS)
     for t in ("mascotas", "productos"):                 # bases creadas con la versión anterior
