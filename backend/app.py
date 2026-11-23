@@ -8,7 +8,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 BASE = os.path.dirname(os.path.abspath(__file__))
 DB = os.environ.get("ILO_DB", os.path.join(BASE, "iloyoli.db"))
 app = Flask(__name__, static_folder=os.path.join(BASE, "..", "frontend"), static_url_path="")
-app.config.update(SECRET_KEY=os.environ.get("SECRET_KEY", "cambia-esto-en-produccion"),
+app.config.update(SECRET_KEY=os.environ.get("SECRET_KEY", "fbea0f67b85a7ff15068d2537026633f7f7c196053a0c22a59f09a7bc3434e86"),
                   SESSION_COOKIE_HTTPONLY=True, SESSION_COOKIE_SAMESITE="Lax")
 
 SCHEMA = """
