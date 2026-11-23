@@ -1,0 +1,7 @@
+/* Vistas creadas por js/ilo-vistas.js (detalle, formularios) */
+#v-d-mascota:checked ~ main #d-mascota,
+#v-d-form-adopcion:checked ~ main #d-form-adopcion,
+#v-d-producto:checked ~ main #d-producto,
+#v-d-vet:checked ~ main #d-vet,
+#v-d-form-cita:checked ~ main #d-form-cita { display: block; }
+.error-api { color: #b3261e; font-weight: 600; }
