@@ -8,7 +8,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 BASE = os.path.dirname(os.path.abspath(__file__))
 DB = os.environ.get("ILO_DB", os.path.join(BASE, "iloyoli.db"))
 app = Flask(__name__, static_folder=os.path.join(BASE, "..", "frontend"), static_url_path="")
-app.config.update(SECRET_KEY=os.environ.get("SECRET_KEY", "cambia-esto-en-produccion"),
+app.config.update(SECRET_KEY=os.environ.get("SECRET_KEY", "fbea0f67b85a7ff15068d2537026633f7f7c196053a0c22a59f09a7bc3434e86"),
                   SESSION_COOKIE_HTTPONLY=True, SESSION_COOKIE_SAMESITE="Lax")
 
 SCHEMA = """
@@ -83,6 +83,8 @@ def iniciar_db():
         clave = os.environ.get("ADMIN_CLAVE", "Admin123!")
         c.execute("INSERT INTO usuarios(nombre,correo,clave,rol) VALUES(?,?,?,'admin')",
                   ("Equipo ilo & oli", "admin@iloyoli.co", generate_password_hash(clave)))
+        c.execute("INSERT INTO usuarios(nombre,correo,clave,rol) VALUES(?,?,?,'usuario')",
+                  ("Usuario de prueba", "usuario@iloyoli.co", generate_password_hash("Usuario123!")))
         c.executemany("INSERT INTO mascotas(nombre,tipo,edad,tamano,fundacion,salud,temperamento) VALUES(?,?,?,?,?,?,?)", MASCOTAS)
         c.executemany("INSERT INTO productos(nombre,categoria,marca,presentacion,precio,stock) VALUES(?,?,?,?,?,?)", PRODUCTOS)
     for t in ("mascotas", "productos"):                 # bases creadas con la versión anterior
