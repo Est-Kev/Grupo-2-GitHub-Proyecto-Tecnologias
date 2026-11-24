@@ -5,6 +5,8 @@ Frontend en HTML, CSS y JavaScript. Backend en Python (Flask) con base de datos 
 
 ## Cómo ejecutarlo
 
+Descargar el zip, extraerlo, abrir el cmd desde la carpeta, copiar pegar y enter de los comandos
+
 ```
 cd backend
 pip install -r requirements.txt
@@ -29,3 +31,9 @@ También se puede crear un usuario nuevo desde "Registrarse".
 
 - backend/: API REST, sesiones y base de datos
 - frontend/: versión de escritorio (index.html) y móvil (movil.html)
+
+## Ramas
+
+- main: La versión final y probada, la que se entrega. Aquí solo llegan cambios ya aprobados.
+- develop: El trabajo del frontend y la zona de pruebas, ajustes de diseño y textos. También es donde se junta todo para probar el proyecto completo antes de pasarlo a main.
+- backend: El trabajo del servidor: lo que esté en la carpeta backend, es decir, la API, el CRUD, las sesiones y la base de datos.
