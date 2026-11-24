@@ -29,4 +29,3 @@ También se puede crear un usuario nuevo desde "Registrarse".
 
 - backend/: API REST, sesiones y base de datos
 - frontend/: versión de escritorio (index.html) y móvil (movil.html)
-- tests/: prueba automática del flujo completo
