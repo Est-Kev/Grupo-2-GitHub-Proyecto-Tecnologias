@@ -8,7 +8,7 @@
   --blanco: #ffffff;
   --borde: #e3ddcc;
   --texto: #20261f;
-  --gris: #6b7266;
+  --gris: #63695e;
   --miel: #e3a44b;
 }
 
@@ -20,7 +20,7 @@ button { font-family: inherit; }
 .icon { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; display: block; }
 
 /* ---------- Navegación entre pantallas  ---------- */
-.pantalla { position: absolute; opacity: 0; pointer-events: none; width: 0; height: 0; }
+.pantalla { display: none; }
 .vista { display: none; }
 #v-inicio:checked ~ main #inicio,
 #v-acceso:checked ~ main #acceso,
@@ -85,7 +85,7 @@ nav {
   margin-right: auto; display: flex; flex-direction: column; line-height: 1;
   font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.05rem; color: var(--verde);
 }
-.logo span + span { color: var(--salvia); }
+.logo span + span { color: #587853; }
 .links { display: flex; gap: 4px; }
 .links label { color: var(--gris); font-size: .92rem; font-weight: 500; padding: 9px 14px; border-radius: 999px; }
 .btn-cuenta {
