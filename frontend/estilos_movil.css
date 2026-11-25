@@ -73,7 +73,7 @@ button { font-family: inherit; }
 #v-conf-membresia:checked ~ main #conf-membresia,
 #v-conf-sello:checked ~ main #conf-sello,
 #v-conf-donacion:checked ~ main #conf-donacion { display: block; }
-label[for] { cursor: pointer; }
+label[for], a[data-ir] { cursor: pointer; }
 
 /* ---------- Barra superior ---------- */
 nav {
@@ -87,7 +87,7 @@ nav {
 }
 .logo span + span { color: #587853; }
 .links { display: flex; gap: 4px; }
-.links label { color: var(--gris); font-size: .92rem; font-weight: 500; padding: 9px 14px; border-radius: 999px; }
+.links a { color: var(--gris); font-size: .92rem; font-weight: 500; padding: 9px 14px; border-radius: 999px; }
 .btn-cuenta {
   border: 1.5px solid var(--verde); color: var(--verde); border-radius: 999px;
   padding: 8px 16px; font-weight: 600; font-size: .9rem; display: flex; align-items: center; gap: 6px;
@@ -99,49 +99,49 @@ nav {
 }
 
 /* Botón activo de la barra según la pantalla abierta */
-#v-mascotas:checked ~ nav .links label[for="v-mascotas"],
-#v-mascota:checked ~ nav .links label[for="v-mascotas"],
-#v-form-adopcion:checked ~ nav .links label[for="v-mascotas"],
-#v-conf-adopcion:checked ~ nav .links label[for="v-mascotas"],
-#v-veterinarias:checked ~ nav .links label[for="v-veterinarias"],
-#v-vet:checked ~ nav .links label[for="v-veterinarias"],
-#v-form-cita:checked ~ nav .links label[for="v-veterinarias"],
-#v-conf-cita:checked ~ nav .links label[for="v-veterinarias"],
-#v-tienda:checked ~ nav .links label[for="v-tienda"],
-#v-producto:checked ~ nav .links label[for="v-tienda"],
-#v-carrito:checked ~ nav .links label[for="v-tienda"],
-#v-pago:checked ~ nav .links label[for="v-tienda"],
-#v-conf-pedido:checked ~ nav .links label[for="v-tienda"],
-#v-donaciones:checked ~ nav .links label[for="v-donaciones"],
-#v-mascota-rocco:checked ~ nav .links label[for="v-mascotas"],
-#v-form-adopcion-rocco:checked ~ nav .links label[for="v-mascotas"],
-#v-mascota-toby:checked ~ nav .links label[for="v-mascotas"],
-#v-form-adopcion-toby:checked ~ nav .links label[for="v-mascotas"],
-#v-mascota-mishi:checked ~ nav .links label[for="v-mascotas"],
-#v-form-adopcion-mishi:checked ~ nav .links label[for="v-mascotas"],
-#v-mascota-simon:checked ~ nav .links label[for="v-mascotas"],
-#v-form-adopcion-simon:checked ~ nav .links label[for="v-mascotas"],
-#v-mascota-nube:checked ~ nav .links label[for="v-mascotas"],
-#v-form-adopcion-nube:checked ~ nav .links label[for="v-mascotas"],
-#v-mascota-max:checked ~ nav .links label[for="v-mascotas"],
-#v-form-adopcion-max:checked ~ nav .links label[for="v-mascotas"],
-#v-mascota-bella:checked ~ nav .links label[for="v-mascotas"],
-#v-form-adopcion-bella:checked ~ nav .links label[for="v-mascotas"],
-#v-vet-patitas:checked ~ nav .links label[for="v-veterinarias"],
-#v-form-cita-patitas:checked ~ nav .links label[for="v-veterinarias"],
-#v-vet-norte:checked ~ nav .links label[for="v-veterinarias"],
-#v-form-cita-norte:checked ~ nav .links label[for="v-veterinarias"],
-#v-vet-refugio:checked ~ nav .links label[for="v-veterinarias"],
-#v-form-cita-refugio:checked ~ nav .links label[for="v-veterinarias"],
-#v-producto-humedo:checked ~ nav .links label[for="v-tienda"],
-#v-producto-snacks:checked ~ nav .links label[for="v-tienda"],
-#v-producto-shampoo:checked ~ nav .links label[for="v-tienda"],
-#v-producto-toallitas:checked ~ nav .links label[for="v-tienda"],
-#v-producto-arena:checked ~ nav .links label[for="v-tienda"],
-#v-producto-correa:checked ~ nav .links label[for="v-tienda"],
-#v-producto-rascador:checked ~ nav .links label[for="v-tienda"],
-#v-producto-cama:checked ~ nav .links label[for="v-tienda"],
-#v-conf-donacion:checked ~ nav .links label[for="v-donaciones"] {
+#v-mascotas:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-mascota:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-form-adopcion:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-conf-adopcion:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-veterinarias:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-vet:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-form-cita:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-conf-cita:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-tienda:checked ~ nav .links a[data-ir="v-tienda"],
+#v-producto:checked ~ nav .links a[data-ir="v-tienda"],
+#v-carrito:checked ~ nav .links a[data-ir="v-tienda"],
+#v-pago:checked ~ nav .links a[data-ir="v-tienda"],
+#v-conf-pedido:checked ~ nav .links a[data-ir="v-tienda"],
+#v-donaciones:checked ~ nav .links a[data-ir="v-donaciones"],
+#v-mascota-rocco:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-form-adopcion-rocco:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-mascota-toby:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-form-adopcion-toby:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-mascota-mishi:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-form-adopcion-mishi:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-mascota-simon:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-form-adopcion-simon:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-mascota-nube:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-form-adopcion-nube:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-mascota-max:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-form-adopcion-max:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-mascota-bella:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-form-adopcion-bella:checked ~ nav .links a[data-ir="v-mascotas"],
+#v-vet-patitas:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-form-cita-patitas:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-vet-norte:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-form-cita-norte:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-vet-refugio:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-form-cita-refugio:checked ~ nav .links a[data-ir="v-veterinarias"],
+#v-producto-humedo:checked ~ nav .links a[data-ir="v-tienda"],
+#v-producto-snacks:checked ~ nav .links a[data-ir="v-tienda"],
+#v-producto-shampoo:checked ~ nav .links a[data-ir="v-tienda"],
+#v-producto-toallitas:checked ~ nav .links a[data-ir="v-tienda"],
+#v-producto-arena:checked ~ nav .links a[data-ir="v-tienda"],
+#v-producto-correa:checked ~ nav .links a[data-ir="v-tienda"],
+#v-producto-rascador:checked ~ nav .links a[data-ir="v-tienda"],
+#v-producto-cama:checked ~ nav .links a[data-ir="v-tienda"],
+#v-conf-donacion:checked ~ nav .links a[data-ir="v-donaciones"] {
   background: var(--verde); color: white;
 }
 
@@ -179,7 +179,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px 80px; }
   width: 48px; height: 48px; border-radius: 50%; background: var(--menta); color: var(--verde);
   display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
 }
-.acceso h3 { font-size: 1.02rem; margin-bottom: 4px; }
+.acceso h3, .acceso h2 { font-size: 1.02rem; margin-bottom: 4px; }
 .acceso p { font-size: .86rem; margin: 0; }
 
 .bloque { padding: 38px 0; }
@@ -248,7 +248,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 28px 80px; }
   font-size: .7rem; font-weight: 700; padding: 3px 9px; border-radius: 999px;
 }
 .tarjeta .texto { padding: 15px 16px; }
-.tarjeta h4 { font-size: 1rem; margin-bottom: 3px; }
+.tarjeta h3 { font-size: 1rem; margin-bottom: 3px; }
 .meta { font-size: .82rem; color: var(--gris); }
 
 /* ---------- Detalles ---------- */
@@ -292,8 +292,8 @@ dd { margin: 0; font-weight: 500; }
 .campo .check { display: flex; align-items: center; gap: 8px; font-weight: 500; margin-bottom: 8px; }
 .campo .check input { width: auto; accent-color: var(--verde); }
 .pestanas { display: flex; gap: 4px; margin-bottom: 20px; background: var(--menta); padding: 4px; border-radius: 999px; max-width: 320px; }
-.pestanas label { flex: 1; text-align: center; font-weight: 600; font-size: .88rem; padding: 9px 12px; color: var(--gris); border-radius: 999px; }
-.pestanas label.activo { background: var(--blanco); color: var(--verde); }
+.pestanas a { flex: 1; text-align: center; font-weight: 600; font-size: .88rem; padding: 9px 12px; color: var(--gris); border-radius: 999px; }
+.pestanas a.activo { background: var(--blanco); color: var(--verde); }
 .montos { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
 ul.lista { padding-left: 20px; margin: 0 0 16px; color: var(--gris); line-height: 1.75; }
 
@@ -328,9 +328,9 @@ ul.lista { padding-left: 20px; margin: 0 0 16px; color: var(--gris); line-height
 /* ---------- Pie ---------- */
 footer { border-top: 1px solid var(--borde); padding: 40px 28px 24px; }
 .pie { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 28px; }
-.pie h4 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gris); margin-bottom: 12px; }
+.pie h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gris); margin-bottom: 12px; }
 .pie ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: .88rem; color: var(--gris); }
-.pie ul label { color: var(--texto); }
+.pie ul a { color: var(--texto); }
 .pie-final { max-width: 1080px; margin: 28px auto 0; padding-top: 20px; border-top: 1px solid var(--borde); font-size: .8rem; color: var(--gris); text-align: center; }
 
 /* ---------- Celular ---------- */
@@ -345,7 +345,7 @@ footer { border-top: 1px solid var(--borde); padding: 40px 28px 24px; }
   .accesibilidad ul { grid-template-columns: 1fr; }
   nav { flex-wrap: wrap; padding: 12px 16px; gap: 8px 10px; }
   .links { order: 3; flex-basis: 100%; justify-content: space-between; }
-  .links label { padding: 8px 6px; font-size: .82rem; flex: 1; text-align: center; }
+  .links a { padding: 8px 6px; font-size: .82rem; flex: 1; text-align: center; }
   main { padding: 0 18px 60px; }
 
 
@@ -401,7 +401,7 @@ body.modo-admin nav.nav-usuario { display: none; }
 
 
 /* Navegación admin: página actual */
-nav.nav-admin .links label[aria-current="page"] { background: var(--verde); color: #fff; }
+nav.nav-admin .links a[aria-current="page"] { background: var(--verde); color: #fff; }
 nav.nav-admin .btn-cuenta[aria-current="page"] { background: var(--verde); color: #fff; }
 
 .admin { display: grid; grid-template-columns: 210px 1fr; gap: 56px; padding-top: 40px; align-items: start; }
@@ -412,8 +412,8 @@ nav.nav-admin .btn-cuenta[aria-current="page"] { background: var(--verde); color
 }
 .avatar .icon { width: 42px; height: 42px; stroke-width: 1.4; }
 .lateral ul { list-style: none; margin: 0; padding: 0; }
-.lateral li label { display: block; padding: 12px 6px 10px 34px; font-size: .92rem; color: var(--texto); border-bottom: 1px solid var(--borde); }
-.lateral li label[aria-current="page"] { color: var(--verde); font-weight: 700; border-bottom-color: var(--verde); }
+.lateral li a { display: block; padding: 12px 6px 10px 34px; font-size: .92rem; color: var(--texto); border-bottom: 1px solid var(--borde); }
+.lateral li a[aria-current="page"] { color: var(--verde); font-weight: 700; border-bottom-color: var(--verde); }
 .lateral li.separador { height: 64px; }
 .admin-contenido { min-width: 0; padding-bottom: 20px; }
 .admin-contenido > h2 { font-size: 1.5rem; }
@@ -423,8 +423,8 @@ nav.nav-admin .btn-cuenta[aria-current="page"] { background: var(--verde); color
   font-weight: 600; font-size: .88rem; padding: 10px 20px; border-radius: 999px; margin: 0 0 12px;
 }
 .pestanas.ancha { max-width: none; width: fit-content; }
-.pestanas.ancha label { flex: none; padding: 9px 22px; }
-.pestanas label[aria-current="page"] { background: var(--blanco); color: var(--verde); }
+.pestanas.ancha a { flex: none; padding: 9px 22px; }
+.pestanas a[aria-current="page"] { background: var(--blanco); color: var(--verde); }
 
 .panel.panel-ancho { max-width: none; }
 
@@ -469,12 +469,12 @@ nav.nav-admin .btn-cuenta[aria-current="page"] { background: var(--verde); color
   .lateral { position: static; min-width: 0; }
   .avatar { display: none; }
   .lateral ul { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; }
-  .lateral li label { padding: 8px 14px; border: 1px solid var(--borde); border-radius: 999px; white-space: nowrap; }
+  .lateral li a { padding: 8px 14px; border: 1px solid var(--borde); border-radius: 999px; white-space: nowrap; }
   .lateral li.separador { display: none; }
   .graficas, .accesos.tres { grid-template-columns: 1fr; }
   .kpis { grid-template-columns: 1fr; }
   .pestanas.ancha { width: 100%; flex-wrap: wrap; border-radius: 20px; }
-  .pestanas.ancha label { flex: 1; padding: 9px 12px; }
+  .pestanas.ancha a { flex: 1; padding: 9px 12px; }
 
 
 .fila-admin .acciones { display: flex; gap: 8px; }
@@ -496,7 +496,7 @@ nav.abierto .menu-btn .ic-cerrar { display: block; }
   .menu-btn { display: inline-flex; }
   nav .links { display: none; flex-direction: column; gap: 2px; margin-top: 4px; padding-top: 8px; border-top: 1px solid var(--borde); }
   nav.abierto .links { display: flex; }
-  nav .links label { flex: none; text-align: left; font-size: .98rem; padding: 12px 16px; }
+  nav .links a { flex: none; text-align: left; font-size: .98rem; padding: 12px 16px; }
   .btn-cuenta { padding: 8px 12px; font-size: .84rem; }
 
 
