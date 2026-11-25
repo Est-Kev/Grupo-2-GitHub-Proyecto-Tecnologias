@@ -20,7 +20,7 @@ button { font-family: inherit; }
 .icon { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; display: block; }
 
 /* ---------- Navegación entre pantallas  ---------- */
-.pantalla { position: absolute; opacity: 0; pointer-events: none; width: 0; height: 0; }
+.pantalla { display: none; }
 .vista { display: none; }
 #v-inicio:checked ~ main #inicio,
 #v-acceso:checked ~ main #acceso,
