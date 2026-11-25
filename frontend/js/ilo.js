@@ -20,7 +20,7 @@
 
   /* ---------- Acciones por data-accion (antes que el script inline) ---------- */
   document.addEventListener('click', function (e) {
-    var lab = e.target.closest && e.target.closest('label[data-accion]');
+    var lab = e.target.closest && e.target.closest('[data-accion]');
     if (!lab) return;
     var accion = lab.getAttribute('data-accion'), panel = lab.closest('.panel') || lab.parentNode;
     if (!/^(login|registro|logout|adoptar|perfil|guardar-mascota|guardar-producto)$/.test(accion)) return;
@@ -45,7 +45,7 @@
     tarea.then(function (r) {
       aviso(panel, '');
       if (accion === 'login' || accion === 'registro') { estado.usuario = r; window.iloApp.entrar(r.rol); }
-      else { estado.editar = null; ir(lab.getAttribute('for')); }
+      else { estado.editar = null; ir(lab.getAttribute('data-ir')); }
     }).catch(function (er) {
       aviso(panel, er.message);
       if (er.status === 401 && accion === 'adoptar') ir('v-acceso');
@@ -83,7 +83,7 @@
   });
   /* "Agregar ..." parte de un formulario limpio */
   document.addEventListener('click', function (e) {
-    var l = e.target.closest && e.target.closest('label[for="v-adm-mascota-nueva"],label[for="v-adm-producto-nuevo"]');
+    var l = e.target.closest && e.target.closest('[data-ir="v-adm-mascota-nueva"],[data-ir="v-adm-producto-nuevo"]');
     if (l && !l.hasAttribute('data-accion')) { estado.editar = null; document.querySelectorAll('#adm-mascota-nueva input,#adm-mascota-nueva textarea,#adm-producto-nuevo input,#adm-producto-nuevo textarea').forEach(function (i) { i.value = ''; }); }
   });
 
