@@ -24,10 +24,20 @@
   [['d-mascota', 'Detalle de mascota'], ['d-form-adopcion', 'Solicitud de adopción'], ['d-producto', 'Detalle de producto'],
    ['d-vet', 'Detalle de veterinaria'], ['d-form-cita', 'Solicitud de cita']].forEach(function (v) {
     var r = document.createElement('input');
-    r.type = 'radio'; r.name = 'pantalla'; r.id = 'v-' + v[0]; r.className = 'pantalla'; r.tabIndex = -1; r.setAttribute('aria-hidden', 'true');
+    r.type = 'radio'; r.name = 'pantalla'; r.id = 'v-' + v[0]; r.className = 'pantalla'; r.tabIndex = -1; r.setAttribute('aria-hidden', 'true'); r.setAttribute('aria-label', v[1]);
     main.insertAdjacentElement('beforebegin', r);
     var s = document.createElement('section'); s.className = 'vista'; s.id = v[0]; s.setAttribute('aria-label', v[1]); main.appendChild(s);
   });
+
+  /* Descripción de la foto grande de cada detalle. En las tarjetas la foto va con alt vacío (decorativa): el título ya dice lo mismo. */
+  var DESC_M = { 'mascota-luna': 'Luna, perra de pelaje dorado mirando a la cámara', 'mascota-rocco': 'Rocco, perro negro con marcas color canela, sentado', 'mascota-toby': 'Toby, cachorro beagle',
+    'mascota-mishi': 'Mishi, gata siamesa de ojos azules', 'mascota-simon': 'Simón, gato gris de pelo largo', 'mascota-nube': 'Nube, gatita blanca de ojos azules',
+    'mascota-max': 'Max, perro de asistencia labrador negro con arnés', 'mascota-bella': 'Bella, perro de asistencia labrador dorado con chaleco' };
+  var DESC_P = { 'producto-comida': 'Bolsa de concentrado premium ilo & oli de 3 kg con un plato de croquetas', 'producto-humedo': 'Lata de alimento húmedo para gatos ilo & oli, abierta con una cuchara',
+    'producto-snacks': 'Bolsa de snacks dentales para perro con varias barritas sobre una mesa', 'producto-shampoo': 'Frasco dosificador de shampoo hipoalergénico para mascotas',
+    'producto-toallitas': 'Paquete de toallitas húmedas para mascotas', 'producto-arena': 'Bolsa de arena sanitaria aglomerante para gatos',
+    'producto-correa': 'Correa reflectiva enrollada en colores rojo, naranja y verde', 'producto-rascador': 'Rascador de dos niveles para gatos con un gato asomándose',
+    'producto-cama': 'Cama acolchada gris con interior blanco mullido' };
 
   /* ---- catálogos ---- */
   function tarjeta(k, vista, id, tag, foto, titulo, metas, tags) {
@@ -35,9 +45,9 @@
       (tag ? '<span class="tag">' + esc(tag) + '</span>' : '') + foto + '</div><div class="texto"><h4>' + esc(titulo) + '</h4>' +
       metas.map(function (m) { return '<div class="meta">' + esc(m) + '</div>'; }).join('') + '</div></label>';
   }
-  var cM = function (m) { return tarjeta('m', 'mascota', m.id, m.tipo, img(m.imagen, 'Foto de ' + m.nombre, 1), m.nombre, [m.tipo + ' · ' + m.edad]); };
-  var cP = function (p) { return tarjeta('p', 'producto', p.id, p.categoria, img(p.imagen, p.nombre, 0), p.nombre, [p.categoria + ' · ' + money(p.precio) + (p.stock < 1 ? ' · Agotado' : '')]); };
-  var cV = function (v) { return tarjeta('v', 'vet', v.id, v.urgencias ? 'Atiende urgencias' : '', img(v.imagen, 'Fachada de ' + v.nombre, 0), v.nombre, [v.direccion, v.horario], v.servicios.map(function (s) { return s.nombre; }).join('|')); };
+  var cM = function (m) { return tarjeta('m', 'mascota', m.id, m.tipo, img(m.imagen, '', 1), m.nombre, [m.tipo + ' · ' + m.edad]); };
+  var cP = function (p) { return tarjeta('p', 'producto', p.id, p.categoria, img(p.imagen, '', 0), p.nombre, [p.categoria + ' · ' + money(p.precio) + (p.stock < 1 ? ' · Agotado' : '')]); };
+  var cV = function (v) { return tarjeta('v', 'vet', v.id, v.urgencias ? 'Atiende urgencias' : '', img(v.imagen, '', 0), v.nombre, [v.direccion, v.horario], v.servicios.map(function (s) { return s.nombre; }).join('|')); };
   function grilla(q, arr, fn) { var g = document.querySelector(q); if (g) g.innerHTML = arr.map(fn).join(''); }
   function disponibles() { return D.m.filter(function (m) { return m.estado === 'Disponible'; }); }
   function renderCatalogos() {
@@ -60,7 +70,7 @@
     var m = por(D.m, sel.id), s = $('d-mascota');
     if (!m) { s.innerHTML = volver('v-mascotas', 'Volver al catálogo') + '<p>No encontramos esta mascota.</p>'; return; }
     s.setAttribute('aria-label', 'Detalle de mascota: ' + m.nombre);
-    s.innerHTML = volver('v-mascotas', 'Volver al catálogo') + '<div class="detalle"><div class="foto">' + img(m.imagen, 'Foto de ' + m.nombre, 0) + '</div><div><h2>' + esc(m.nombre) + '</h2><div>' +
+    s.innerHTML = volver('v-mascotas', 'Volver al catálogo') + '<div class="detalle"><div class="foto">' + img(m.imagen, DESC_M[m.imagen] || 'Foto de ' + m.nombre, 0) + '</div><div><h2>' + esc(m.nombre) + '</h2><div>' +
       '<span class="badge">' + ic('paw') + ' ' + esc(m.tipo) + '</span><span class="badge">' + ic('reloj') + ' ' + esc(m.edad) + '</span><span class="badge">' + ic('check') + ' ' + esc(m.estado) + '</span></div>' +
       '<dl><dt>Santuario / fundación</dt><dd>' + esc(m.fundacion) + '</dd><dt>Estado de salud</dt><dd>' + esc(m.salud) + '</dd><dt>Tamaño</dt><dd>' + esc(m.tamano) + '</dd><dt>Temperamento</dt><dd>' + esc(m.temperamento) + '</dd></dl>' +
       (m.estado === 'Disponible' ? '<label class="btn miel" for="v-d-form-adopcion" role="link" tabindex="0">' + ic('corazon') + ' Solicitar adopción</label>' : '<p>Esta mascota ya fue adoptada.</p>') +
@@ -81,7 +91,7 @@
     var p = por(D.p, sel.id), s = $('d-producto');
     if (!p) { s.innerHTML = volver('v-tienda', 'Volver al catálogo') + '<p>No encontramos este producto.</p>'; return; }
     s.setAttribute('aria-label', 'Detalle de producto: ' + p.nombre);
-    s.innerHTML = volver('v-tienda', 'Volver al catálogo') + '<div class="detalle"><div class="foto">' + img(p.imagen, p.nombre, 0) + '</div><div><span class="badge">' + esc(p.categoria) + '</span><h2>' + esc(p.nombre) + '</h2>' +
+    s.innerHTML = volver('v-tienda', 'Volver al catálogo') + '<div class="detalle"><div class="foto">' + img(p.imagen, DESC_P[p.imagen] || 'Imagen de ' + p.nombre, 0) + '</div><div><span class="badge">' + esc(p.categoria) + '</span><h2>' + esc(p.nombre) + '</h2>' +
       '<p class="precio">' + money(p.precio) + '</p>' + (p.descripcion ? '<p>' + esc(p.descripcion) + '</p>' : '') +
       '<dl><dt>Marca</dt><dd>' + esc(p.marca) + '</dd><dt>Presentación</dt><dd>' + esc(p.presentacion) + '</dd><dt>Stock disponible</dt><dd>' + p.stock + ' unidades</dd></dl><div class="botones">' +
       (p.stock > 0 ? '<label class="btn miel" data-accion="agregar" data-id="' + p.id + '" for="v-carrito" role="button" tabindex="0">' + ic('bolsa') + ' Agregar al carrito</label>' : '<p><b>Agotado</b></p>') +
