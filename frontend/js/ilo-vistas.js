@@ -9,7 +9,7 @@
   var pad = function (n) { return ('0000' + n).slice(-4); };
   var ic = function (n) { return '<svg class="icon" aria-hidden="true" focusable="false"><use href="#' + n + '"/></svg>'; };
   var por = function (lista, id) { return lista.filter(function (x) { return String(x.id) === String(id); })[0]; };
-  var volver = function (a, t) { return '<label class="volver" for="' + a + '" role="link" tabindex="0">' + ic('atras') + ' ' + t + '</label>'; };
+  var volver = function (a, t) { return '<a class="volver" data-ir="' + a + '" role="link" tabindex="0">' + ic('atras') + ' ' + t + '</a>'; };
   /* movil.html usa su propio set de imágenes (sufijo -movil); si aún no existe, cae a la de escritorio */
   var SUF = /movil/i.test(location.pathname) ? '-movil' : '';
   var img = function (b, alt, mini) {
@@ -39,11 +39,18 @@
     'producto-correa': 'Correa reflectiva enrollada en colores rojo, naranja y verde', 'producto-rascador': 'Rascador de dos niveles para gatos con un gato asomándose',
     'producto-cama': 'Cama acolchada gris con interior blanco mullido' };
 
+  /* Los botones de pantalla no son campos de formulario: se les da nombre accesible */
+  document.querySelectorAll('input.pantalla').forEach(function (r) {
+    if (r.hasAttribute('aria-label')) return;
+    var s = document.getElementById(r.id.replace(/^v-/, ''));
+    r.setAttribute('aria-label', (s && s.getAttribute('aria-label')) || r.id.replace(/^v-/, '').replace(/-/g, ' '));
+  });
+
   /* ---- catálogos ---- */
   function tarjeta(k, vista, id, tag, foto, titulo, metas, tags) {
-    return '<label class="tarjeta" for="v-d-' + vista + '" data-k="' + k + '" data-id="' + id + '" role="link" tabindex="0"' + (tags ? ' data-tags="' + esc(tags) + '"' : '') + '><div class="imagen">' +
-      (tag ? '<span class="tag">' + esc(tag) + '</span>' : '') + foto + '</div><div class="texto"><h4>' + esc(titulo) + '</h4>' +
-      metas.map(function (m) { return '<div class="meta">' + esc(m) + '</div>'; }).join('') + '</div></label>';
+    return '<a class="tarjeta" data-ir="v-d-' + vista + '" data-k="' + k + '" data-id="' + id + '" role="link" tabindex="0"' + (tags ? ' data-tags="' + esc(tags) + '"' : '') + '><div class="imagen">' +
+      (tag ? '<span class="tag">' + esc(tag) + '</span>' : '') + foto + '</div><div class="texto"><h3>' + esc(titulo) + '</h3>' +
+      metas.map(function (m) { return '<div class="meta">' + esc(m) + '</div>'; }).join('') + '</div></a>';
   }
   var cM = function (m) { return tarjeta('m', 'mascota', m.id, m.tipo, img(m.imagen, '', 1), m.nombre, [m.tipo + ' · ' + m.edad]); };
   var cP = function (p) { return tarjeta('p', 'producto', p.id, p.categoria, img(p.imagen, '', 0), p.nombre, [p.categoria + ' · ' + money(p.precio) + (p.stock < 1 ? ' · Agotado' : '')]); };
@@ -73,7 +80,7 @@
     s.innerHTML = volver('v-mascotas', 'Volver al catálogo') + '<div class="detalle"><div class="foto">' + img(m.imagen, DESC_M[m.imagen] || 'Foto de ' + m.nombre, 0) + '</div><div><h2>' + esc(m.nombre) + '</h2><div>' +
       '<span class="badge">' + ic('paw') + ' ' + esc(m.tipo) + '</span><span class="badge">' + ic('reloj') + ' ' + esc(m.edad) + '</span><span class="badge">' + ic('check') + ' ' + esc(m.estado) + '</span></div>' +
       '<dl><dt>Santuario / fundación</dt><dd>' + esc(m.fundacion) + '</dd><dt>Estado de salud</dt><dd>' + esc(m.salud) + '</dd><dt>Tamaño</dt><dd>' + esc(m.tamano) + '</dd><dt>Temperamento</dt><dd>' + esc(m.temperamento) + '</dd></dl>' +
-      (m.estado === 'Disponible' ? '<label class="btn miel" for="v-d-form-adopcion" role="link" tabindex="0">' + ic('corazon') + ' Solicitar adopción</label>' : '<p>Esta mascota ya fue adoptada.</p>') +
+      (m.estado === 'Disponible' ? '<a class="btn miel" data-ir="v-d-form-adopcion" role="link" tabindex="0">' + ic('corazon') + ' Solicitar adopción</a>' : '<p>Esta mascota ya fue adoptada.</p>') +
       '</div></div>' + otras(disponibles(), cM, m.id);
   }
   function dFA() {
@@ -85,7 +92,7 @@
       '<div class="campo"><label for="ad-d-nombre">Nombre completo</label><input id="ad-d-nombre" type="text" value="' + esc(u.nombre || '') + '" readonly></div>' +
       '<div class="campo"><label for="ad-d-viv">Tipo de vivienda</label><select id="ad-d-viv"><option>Casa con patio</option><option>Apartamento</option></select></div>' +
       '<div class="campo"><label for="ad-d-obs">Observaciones</label><textarea id="ad-d-obs" rows="3" placeholder="Cuéntale a la fundación por qué quieres adoptar"></textarea></div>' +
-      '<label class="btn ancho" data-accion="adoptar" data-mascota="' + esc(m.nombre) + '" for="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</label></div>';
+      '<a class="btn ancho" data-accion="adoptar" data-mascota="' + esc(m.nombre) + '" data-ir="v-conf-adopcion" role="button" tabindex="0">Enviar solicitud</a></div>';
   }
   function dP() {
     var p = por(D.p, sel.id), s = $('d-producto');
@@ -94,8 +101,8 @@
     s.innerHTML = volver('v-tienda', 'Volver al catálogo') + '<div class="detalle"><div class="foto">' + img(p.imagen, DESC_P[p.imagen] || 'Imagen de ' + p.nombre, 0) + '</div><div><span class="badge">' + esc(p.categoria) + '</span><h2>' + esc(p.nombre) + '</h2>' +
       '<p class="precio">' + money(p.precio) + '</p>' + (p.descripcion ? '<p>' + esc(p.descripcion) + '</p>' : '') +
       '<dl><dt>Marca</dt><dd>' + esc(p.marca) + '</dd><dt>Presentación</dt><dd>' + esc(p.presentacion) + '</dd><dt>Stock disponible</dt><dd>' + p.stock + ' unidades</dd></dl><div class="botones">' +
-      (p.stock > 0 ? '<label class="btn miel" data-accion="agregar" data-id="' + p.id + '" for="v-carrito" role="button" tabindex="0">' + ic('bolsa') + ' Agregar al carrito</label>' : '<p><b>Agotado</b></p>') +
-      '<label class="btn borde" for="v-carrito" role="link" tabindex="0">Ver carrito</label></div></div></div>' +
+      (p.stock > 0 ? '<a class="btn miel" data-accion="agregar" data-id="' + p.id + '" data-ir="v-carrito" role="button" tabindex="0">' + ic('bolsa') + ' Agregar al carrito</a>' : '<p><b>Agotado</b></p>') +
+      '<a class="btn borde" data-ir="v-carrito" role="link" tabindex="0">Ver carrito</a></div></div></div>' +
       otras(D.p.filter(function (x) { return x.categoria === p.categoria; }), cP, p.id);
   }
   function dV() {
@@ -106,8 +113,8 @@
       '<div class="dato"><span class="circulo">' + ic('pin') + '</span>' + esc(v.direccion) + '</div><div class="dato"><span class="circulo">' + ic('telefono') + '</span>' + esc(v.telefono) + '</div>' +
       '<div class="dato"><span class="circulo">' + ic('reloj') + '</span>' + esc(v.horario) + '</div></div><div class="subtitulo">Servicios</div><div>' +
       v.servicios.map(function (x) { return '<span class="badge">' + esc(x.nombre) + '</span>'; }).join('') + '</div><div class="subtitulo">Precios y reserva</div><div style="margin-bottom:22px">' +
-      v.servicios.map(function (x) { return '<div class="fila-precio"><span class="nombre">' + esc(x.nombre) + '</span><span class="valor">' + money(x.precio) + '</span><label class="btn chico borde" data-svc="' + x.id + '" for="v-d-form-cita" role="link" tabindex="0" aria-label="Reservar ' + esc(x.nombre) + '">Reservar</label></div>'; }).join('') +
-      '</div><label class="btn miel" for="v-d-form-cita" role="link" tabindex="0">' + ic('calendario') + ' Solicitar cita</label>';
+      v.servicios.map(function (x) { return '<div class="fila-precio"><span class="nombre">' + esc(x.nombre) + '</span><span class="valor">' + money(x.precio) + '</span><a class="btn chico borde" data-svc="' + x.id + '" data-ir="v-d-form-cita" role="link" tabindex="0" aria-label="Reservar ' + esc(x.nombre) + '">Reservar</a></div>'; }).join('') +
+      '</div><a class="btn miel" data-ir="v-d-form-cita" role="link" tabindex="0">' + ic('calendario') + ' Solicitar cita</a>';
   }
   function dFC() {
     var v = por(D.v, sel.id), s = $('d-form-cita');
@@ -117,7 +124,7 @@
       '<div class="campo"><label for="ct-d-servicio">Servicio</label><select id="ct-d-servicio">' + v.servicios.map(function (x) { return '<option value="' + x.id + '"' + (String(x.id) === String(sel.svc) ? ' selected' : '') + '>' + esc(x.nombre) + ' — ' + money(x.precio) + '</option>'; }).join('') + '</select></div>' +
       '<div class="campo"><label for="ct-d-fecha">Fecha</label><input id="ct-d-fecha" type="date" min="' + new Date().toISOString().slice(0, 10) + '"></div>' +
       '<div class="campo"><label for="ct-d-hora">Hora</label><input id="ct-d-hora" type="time"></div>' +
-      '<label class="btn ancho" data-accion="cita" for="v-conf-cita" role="button" tabindex="0">Solicitar cita</label></div>';
+      '<a class="btn ancho" data-accion="cita" data-ir="v-conf-cita" role="button" tabindex="0">Solicitar cita</a></div>';
   }
 
   /* ---- carrito y pago (el total real lo calcula el servidor) ---- */
@@ -131,13 +138,13 @@
   function pintarCarrito() {
     var panel = $('carrito').querySelector('.panel');
     carrito = carrito.filter(function (i) { return por(D.p, i.id); }); guardarCarrito();
-    if (!carrito.length) { panel.innerHTML = '<p>Tu carrito está vacío.</p><label class="btn ancho" for="v-tienda" role="link" tabindex="0">Ir a la tienda</label>'; return; }
+    if (!carrito.length) { panel.innerHTML = '<p>Tu carrito está vacío.</p><a class="btn ancho" data-ir="v-tienda" role="link" tabindex="0">Ir a la tienda</a>'; return; }
     panel.innerHTML = carrito.map(function (i) {
       var p = por(D.p, i.id);
       return '<div class="fila-carrito"><span class="nombre">' + esc(p.nombre) + '</span><div class="cantidad" role="group" aria-label="Cantidad de ' + esc(p.nombre) + '">' +
         '<button type="button" data-act="qty" data-d="-1" data-id="' + p.id + '" aria-label="Disminuir cantidad">–</button><span>' + i.cantidad + '</span><button type="button" data-act="qty" data-d="1" data-id="' + p.id + '" aria-label="Aumentar cantidad">+</button></div>' +
         '<span>' + money(p.precio * i.cantidad) + '</span><button type="button" class="quitar" data-act="quitar" data-id="' + p.id + '" aria-label="Quitar ' + esc(p.nombre) + ' del carrito"><span aria-hidden="true">✕</span></button></div>';
-    }).join('') + '<div class="total"><span>Total</span><span>' + money(totalCarrito()) + '</span></div><label class="btn miel ancho" for="v-pago" role="link" tabindex="0">Ir a pagar</label>';
+    }).join('') + '<div class="total"><span>Total</span><span>' + money(totalCarrito()) + '</span></div><a class="btn miel ancho" data-ir="v-pago" role="link" tabindex="0">Ir a pagar</a>';
   }
   function pintarPago() { var t = document.querySelector('#pago .total-pago .total span:last-child'); if (t) t.textContent = money(totalCarrito()); }
   function validarPago() {
@@ -153,7 +160,7 @@
   /* ---- acciones (se evalúan antes que el script inline, igual que ilo.js) ---- */
   var PROPIAS = ['cita', 'pagar', 'donar', 'activar', 'sello'];
   document.addEventListener('click', function (e) {
-    var lab = e.target.closest && e.target.closest('label[data-accion]'); if (!lab) return;
+    var lab = e.target.closest && e.target.closest('[data-accion]'); if (!lab) return;
     var a = lab.getAttribute('data-accion');
     if (a === 'agregar') {
       var p = por(D.p, lab.getAttribute('data-id')), it = carrito.filter(function (i) { return String(i.id) === String(p.id); })[0];
@@ -162,7 +169,7 @@
     }
     if (PROPIAS.indexOf(a) === -1) return;
     e.preventDefault(); e.stopImmediatePropagation();
-    var panel = lab.closest('.panel') || lab.parentNode, dest = lab.getAttribute('for'), tarea, msg = '';
+    var panel = lab.closest('.panel') || lab.parentNode, dest = lab.getAttribute('data-ir'), tarea, msg = '';
     if (a === 'cita') { if (!$('ct-d-fecha').value || !$('ct-d-hora').value) msg = 'Elige una fecha y una hora.'; else tarea = api('POST', '/api/citas', { servicio_id: $('ct-d-servicio').value, fecha: $('ct-d-fecha').value, hora: $('ct-d-hora').value }); }
     else if (a === 'donar') { if (!($('do-monto').value > 0)) msg = 'Indica el monto de tu donación.'; else tarea = api('POST', '/api/donaciones', { monto: $('do-monto').value, fundacion: $('do-fundacion').value }); }
     else if (a === 'activar') tarea = api('POST', '/api/membresia');
@@ -185,14 +192,14 @@
   var PINTAR = {};
   document.addEventListener('click', function (e) {
     var t = e.target.closest ? e.target : e.target.parentNode;
-    var card = t.closest('label[data-k]');
+    var card = t.closest('[data-k]');
     if (card) {
       sel = { k: card.dataset.k, id: card.dataset.id };
-      var dest = card.getAttribute('for');           // si ya estás en esa vista el radio no cambia: se repinta a mano
+      var dest = card.getAttribute('data-ir');           // si ya estás en esa vista el radio no cambia: se repinta a mano
       if ($(dest).checked) { PINTAR[dest](); window.scrollTo(0, 0); }
       return;
     }
-    var svc = t.closest('label[data-svc]'); if (svc) sel.svc = svc.getAttribute('data-svc');
+    var svc = t.closest('[data-svc]'); if (svc) sel.svc = svc.getAttribute('data-svc');
     var chip = t.closest('.montos .chip'); if (chip) $('do-monto').value = chip.textContent.replace(/\D/g, '');
     var b = t.closest('button[data-act]'); if (!b) return;
     var act = b.getAttribute('data-act'), id = b.getAttribute('data-id'), est = b.getAttribute('data-est');
